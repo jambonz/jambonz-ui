@@ -1,4 +1,6 @@
 import { classNames } from './utils';
+import { Icon, IconGroup } from './icon';
+import { Button, ButtonGroup } from './button';
 import {
   P,
   M,
@@ -10,11 +12,7 @@ import {
   H6,
   MS,
   MXS,
-  Icon,
-  Button,
-  IconGroup,
-  ButtonGroup,
-} from './components';
+} from './typography';
 
 export {
   P,

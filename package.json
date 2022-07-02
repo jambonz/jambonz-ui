@@ -1,6 +1,6 @@
 {
   "name": "jambonz-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The Jambonz UI library is a minimal, light-weight UI design package for developing frontends for jambonz apps.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

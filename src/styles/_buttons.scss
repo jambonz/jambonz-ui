@@ -40,6 +40,36 @@
       color: $white;
     }
 
+    &--blue {
+      color: $blue;
+      border-color: $blue;
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+
+    &--teal {
+      color: $teal;
+      border-color: $teal;
+
+      &:hover {
+        background-color: $teal;
+        color: $white;
+      }
+    }
+
+    &--purple {
+      color: $purple;
+      border-color: $purple;
+
+      &:hover {
+        background-color: $purple;
+        color: $white;
+      }
+    }
+
     &--white {
       color: $white;
       border-color: $white;
@@ -64,11 +94,11 @@
       }
     }
 
-    &--purple {
-      background-color: $purple;
+    &--blue {
+      background-color: $blue;
 
       &:hover {
-        background-color: mix($white, $purple, $mix-amount);
+        background-color: mix($white, $blue, $mix-amount);
       }
     }
 
@@ -80,15 +110,15 @@
       }
     }
 
-    &--blue {
-      background-color: $blue;
+    &--purple {
+      background-color: $purple;
 
       &:hover {
-        background-color: mix($white, $blue, $mix-amount);
+        background-color: mix($white, $purple, $mix-amount);
       }
     }
 
-    &--light {
+    &--white {
       background-color: $white;
       color: $jambonz;
 
@@ -152,6 +182,78 @@
 
       svg {
         stroke: $jambonz;
+      }
+    }
+
+    &--blue {
+      border-color: $blue;
+      color: $blue;
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+
+        svg {
+          stroke: $white;
+        }
+      }
+
+      svg {
+        stroke: $blue;
+      }
+    }
+
+    &--teal {
+      border-color: $teal;
+      color: $teal;
+
+      &:hover {
+        background-color: $teal;
+        color: $white;
+
+        svg {
+          stroke: $white;
+        }
+      }
+
+      svg {
+        stroke: $teal;
+      }
+    }
+
+    &--purple {
+      border-color: $purple;
+      color: $purple;
+
+      &:hover {
+        background-color: $purple;
+        color: $white;
+
+        svg {
+          stroke: $white;
+        }
+      }
+
+      svg {
+        stroke: $purple;
+      }
+    }
+
+    &--white {
+      border-color: $white;
+      color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $charcoal;
+
+        svg {
+          stroke: $charcoal;
+        }
+      }
+
+      svg {
+        stroke: $white;
       }
     }
   }

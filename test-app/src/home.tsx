@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import { Icons } from '../../src/js/icons';
-import { P, M, MS, MXS, H1, H2, H3, H4, H5, H6, Icon, Button, IconGroup, ButtonGroup } from '../../src/js/index';
+import { Icons } from './icons';
+import { P, M, MS, MXS, H1, H2, H3, H4, H5, H6, Icon, IconGroup, Button, ButtonGroup } from '../../src/js/index';
 
 import { reducer, initialState } from './state';
 
@@ -133,7 +133,12 @@ export const HomePage = () => {
           </IconGroup>
         </div>
         <div className="pad">
-          <Button mainStyle="login">Log In</Button>
+          <ButtonGroup>
+            <Button mainStyle="login">Log In</Button>
+            <Button mainStyle="login" subStyle="purple">Log In</Button>
+            <Button mainStyle="login" subStyle="teal">Log In</Button>
+            <Button mainStyle="login" subStyle="blue">Log In</Button>
+          </ButtonGroup>
         </div>
       </div>
       <div className="bg--charcoal">
@@ -144,8 +149,13 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="bg--charcoal">
-        <div className="pad">
-          <Button mainStyle="login" subStyle="white">Log In</Button>
+        <div className="wrap pad">
+          <ButtonGroup>
+            <Button mainStyle="login" subStyle="white">Log In</Button>
+            <Button mainStyle="login" subStyle="purple">Log In</Button>
+            <Button mainStyle="login" subStyle="teal">Log In</Button>
+            <Button mainStyle="login" subStyle="blue">Log In</Button>
+          </ButtonGroup>
         </div>
       </div>
       <div className="wrap">
@@ -160,8 +170,18 @@ export const HomePage = () => {
         </ButtonGroup>
       </div>
       <div className="bg--jambonz">
-        <div className="pad">
-          <Button subStyle="light">support@jambonz.org</Button>
+        <div className="wrap pad">
+          <Button subStyle="white">support@jambonz.org</Button>
+        </div>
+      </div>
+      <div className="bg--charcoal">
+        <div className="wrap pad">
+          <ButtonGroup>
+            <Button mainStyle="pill" subStyle="white">styles</Button>
+            <Button mainStyle="pill" subStyle="purple">styles</Button>
+            <Button mainStyle="pill" subStyle="teal">styles</Button>
+            <Button mainStyle="pill" subStyle="blue">styles</Button>
+          </ButtonGroup>
         </div>
       </div>
       <div className="wrap">
@@ -173,6 +193,17 @@ export const HomePage = () => {
           <Button mainStyle="pill">
             <Icons.GitHub />
             <span>github.com/drachtio</span>
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup className="pad">
+          <Button mainStyle="pill" subStyle="purple">
+            <span>colors</span>
+          </Button>
+          <Button mainStyle="pill" subStyle="teal">
+            <span>colors</span>
+          </Button>
+          <Button mainStyle="pill" subStyle="blue">
+            <span>colors</span>
           </Button>
         </ButtonGroup>
         <div className="pad">

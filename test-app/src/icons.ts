@@ -1,4 +1,3 @@
-/** Not included in build/dist -- just an example... */
 import {
   X,
   Lock,

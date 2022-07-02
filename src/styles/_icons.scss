@@ -80,8 +80,8 @@ svg {
   }
 
   &--fill {
-    &--purple {
-      background-color: $purple;
+    &--dark {
+      background-color: $charcoal;
     }
 
     &--blue {
@@ -92,8 +92,8 @@ svg {
       background-color: $teal;
     }
 
-    &--dark {
-      background-color: $charcoal;
+    &--purple {
+      background-color: $purple;
     }
 
     &--white {

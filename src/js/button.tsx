@@ -6,7 +6,7 @@ import { classNames } from './utils';
 
 /** Type imports */
 import type { ClassNameMap } from './utils';
-import type { mainStyles, subStyles } from './common';
+import type { mainStyles, subStyles, DivProps } from './common';
 
 /** Buttons -- optionally polymorphic */
 /** General use case is to render HTML <button> */
@@ -97,7 +97,7 @@ export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
 }
 
 /** Button Groupings, uses <div /> with className */
-type ButtonGroupProps = React.HTMLAttributes<HTMLDivElement> & {
+type ButtonGroupProps = DivProps & {
   /** Accepts className to map */
   className?: string;
 }

@@ -45,6 +45,7 @@ export default [
   {
     input: './test-app/src/app.tsx',
     output: {
+      name: 'test-app',
       file: './test-app/dist/app.js',
       format: 'iife',
     },
@@ -57,6 +58,7 @@ export default [
         tsconfig: './tsconfig.json',
       }),
       replace({
+        preventAssignment: true,
         'process.env.NODE_ENV': JSON.stringify('development'),
       }),
       resolve(),

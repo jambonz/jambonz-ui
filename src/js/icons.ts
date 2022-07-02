@@ -1,3 +1,4 @@
+/** Not included in build/dist -- just an example... */
 import {
   X,
   Lock,
@@ -24,11 +25,11 @@ import {
 } from 'react-feather';
 import type { Icon as IconType } from 'react-feather';
 
-export interface IconsMapObject {
+export interface IconsMap {
   [key: string]: IconType;
 }
 
-export const Icons: IconsMapObject = {
+export const Icons: IconsMap = {
   X,
   Lock,
   Send,

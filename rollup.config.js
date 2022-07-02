@@ -45,7 +45,6 @@ export default [
   {
     input: './test-app/src/app.tsx',
     output: {
-      name: 'test-app',
       file: './test-app/dist/app.js',
       format: 'iife',
     },

@@ -47,16 +47,16 @@ export function P({ children, ...rest }: ParagraphProps) {
 /** HTML divs, as in <div />  */
 type DivProps = React.HTMLAttributes<HTMLDivElement>;
 
-export function M({ children }: DivProps) {
-  return <div className="m">{children}</div>;
+export function M({ children, ...rest }: DivProps) {
+  return <div {...rest} className="m">{children}</div>;
 }
 
-export function MS({ children }: DivProps) {
-  return <div className="ms">{children}</div>;
+export function MS({ children, ...rest }: DivProps) {
+  return <div {...rest} className="ms">{children}</div>;
 }
 
-export function MXS({ children }: DivProps) {
-  return <div className="mxs">{children}</div>;
+export function MXS({ children, ...rest }: DivProps) {
+  return <div {...rest} className="mxs">{children}</div>;
 }
 
 /** Icons, uses <div /> with className */
@@ -64,7 +64,7 @@ type IconProps = DivProps & {
   /** See type subStyles */
   subStyle?: subStyles;
   /** See type mainStyles */
-  mainStyle: mainStyles;
+  mainStyle?: mainStyles;
 };
 
 export function Icon({

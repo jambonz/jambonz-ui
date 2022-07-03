@@ -40,10 +40,8 @@ export function Icon({
 
 /** Icon Groupings, uses <div /> with className */
 type IconGroupProps = DivProps & {
-  /** Applies core className for styling, as in `icons--set` */
+  /** Applies sub class for styling, as in `icons--set` */
   set?: boolean;
-  /** Accepts className to map */
-  className?: string;
 };
 
 export function IconGroup({
@@ -56,7 +54,9 @@ export function IconGroup({
     'icons--set': set,
   };
 
-  className.split(' ').forEach(c => classes[c] = true);
+  if (className) {
+    className.split(' ').forEach(c => classes[c] = true);
+  }
 
   return (
     <div className={classNames(classes)}>

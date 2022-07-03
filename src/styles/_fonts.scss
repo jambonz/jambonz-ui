@@ -1,5 +1,7 @@
+@use 'vars';
+
 @font-face {
-    font-family: $font-regular;
+    font-family: vars.$font-regular;
     src: url('/fonts/objectivity-regular-webfont.woff2') format('woff2'),
          url('/fonts/objectivity-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -7,7 +9,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: $font-regular-italic;
+    font-family: vars.$font-regular-italic;
     src: url('/fonts/objectivity-regularslanted-webfont.woff2') format('woff2'),
          url('/fonts/objectivity-regularslanted-webfont.woff') format('woff');
     font-weight: normal;
@@ -16,7 +18,7 @@
 }
 
 @font-face {
-    font-family: $font-medium;
+    font-family: vars.$font-medium;
     src: url('/fonts/objectivity-medium-webfont.woff2') format('woff2'),
          url('/fonts/objectivity-medium-webfont.woff') format('woff');
     font-weight: normal;
@@ -24,7 +26,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: $font-medium-italic;
+    font-family: vars.$font-medium-italic;
     src: url('/fonts/objectivity-mediumslanted-webfont.woff2') format('woff2'),
          url('/fonts/objectivity-mediumslanted-webfont.woff') format('woff');
     font-weight: normal;
@@ -33,7 +35,7 @@
 }
 
 @font-face {
-    font-family: $font-bold;
+    font-family: vars.$font-bold;
     src: url('/fonts/objectivity-bold-webfont.woff2') format('woff2'),
          url('/fonts/objectivity-bold-webfont.woff') format('woff');
     font-weight: normal;
@@ -41,7 +43,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: $font-bold-italic;
+    font-family: vars.$font-bold-italic;
     src: url('/fonts/objectivity-boldslanted-webfont.woff2') format('woff2'),
          url('/fonts/objectivity-boldslanted-webfont.woff') format('woff');
     font-weight: normal;
@@ -51,7 +53,7 @@
 
 /*
 @font-face {
-  font-family: $font-black;
+  font-family: vars.$font-black;
   src: url('/fonts/objectivity-black-webfont.woff2') format('woff2'),
        url('/fonts/objectivity-black-webfont.woff') format('woff');
   font-weight: normal;
@@ -59,7 +61,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: $font-black-italic;
+  font-family: vars.$font-black-italic;
   src: url('/fonts/objectivity-blackslanted-webfont.woff2') format('woff2'),
        url('/fonts/objectivity-blackslanted-webfont.woff') format('woff');
   font-weight: normal;

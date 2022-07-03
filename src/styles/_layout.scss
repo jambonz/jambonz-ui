@@ -1,9 +1,11 @@
+@use 'vars';
+
 .wrap {
-  max-width: calc(#{$width-max} + #{$width-padding} * 2);
+  max-width: calc(#{vars.$width-max} + #{vars.$width-padding} * 2);
   width: 100%;
   margin: 0 auto;
-  padding-left: $width-padding;
-  padding-right: $width-padding;
+  padding-left: vars.$width-padding;
+  padding-right: vars.$width-padding;
 }
 
 .wrap-text {
@@ -15,7 +17,7 @@
   padding-top: 96px;
   padding-bottom: 96px;
 
-  @media (max-width: $width-tablet-1) {
+  @media (max-width: vars.$width-tablet-1) {
     padding-top: 64px;
     padding-bottom: 64px;
   }
@@ -28,7 +30,7 @@
 .pad-b {
   padding-bottom: 96px;
 
-  @media (max-width: $width-tablet-1) {
+  @media (max-width: vars.$width-tablet-1) {
     padding-bottom: 64px;
   }
 }
@@ -36,7 +38,7 @@
 .pad-t {
   padding-top: 96px;
 
-  @media (max-width: $width-tablet-1) {
+  @media (max-width: vars.$width-tablet-1) {
     padding-top: 64px;
   }
 }

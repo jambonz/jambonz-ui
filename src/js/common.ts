@@ -11,3 +11,9 @@ export type subStyles = 'dark' | 'blue' | 'teal' | 'purple' | 'white';
 
 /** HTML divs, as in <div />  */
 export type DivProps = React.HTMLAttributes<HTMLDivElement>;
+
+/** HTML headings, as in <h[1-6] /> */
+export type HeadingProps = React.HTMLAttributes<HTMLHeadingElement>;
+
+/** HTML paragraphs, as in <p /> */
+export type ParagraphProps = React.HTMLAttributes<HTMLParagraphElement>;

@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import HomePage from './home';
 
 import '../../pkg/public/css/styles.css';
-import './app.css';
 
 const AppLayout = () => (
   <Outlet />

@@ -97,17 +97,14 @@ export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
 }
 
 /** Button Groupings, uses <div /> with className */
-type ButtonGroupProps = DivProps & {
-  /** Accepts className to map */
-  className?: string;
-}
-
-export function ButtonGroup({ children, className = '' }: ButtonGroupProps) {
+export function ButtonGroup({ children, className = '' }: DivProps) {
   const classes: ClassNameMap = {
     'btns': true,
   };
 
-  className.split(' ').forEach(c => classes[c] = true);
+  if (className) {
+    className.split(' ').forEach(c => classes[c] = true);
+  }
 
   return (
     <div className={classNames(classes)}>

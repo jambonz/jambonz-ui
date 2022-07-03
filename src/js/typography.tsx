@@ -2,13 +2,7 @@
 import React from 'react';
 
 /** Type imports */
-import type { DivProps } from './common';
-
-/** HTML headings, as in <h[1-6] /> */
-type HeadingProps = React.HTMLAttributes<HTMLHeadingElement>;
-
-/** HTML paragraphs, as in <p /> */
-type ParagraphProps = React.HTMLAttributes<HTMLParagraphElement>;
+import type { DivProps, HeadingProps, ParagraphProps } from './common';
 
 export function H1({ children, ...rest }: HeadingProps) {
   return <h1 {...rest}>{children}</h1>;

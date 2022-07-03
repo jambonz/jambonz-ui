@@ -1,22 +1,24 @@
+@use 'vars';
+
 svg {
-  transition: stroke $base-dur $base-ease;
+  transition: stroke vars.$base-dur vars.$base-ease;
 }
 
 .icon {
   display: inline-block;
-  background-color: $jambonz;
-  width: $icon-size-1;
-  height: $icon-size-1;
+  background-color: vars.$jambonz;
+  width: vars.$icon-size-1;
+  height: vars.$icon-size-1;
   border-radius: 100%;
   position: relative;
 
-  @media (max-width: $width-mobile) {
-    width: $icon-size-2;
-    height: $icon-size-2;
+  @media (max-width: vars.$width-mobile) {
+    width: vars.$icon-size-2;
+    height: vars.$icon-size-2;
   }
 
   svg {
-    stroke: $white;
+    stroke: vars.$white;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -24,7 +26,7 @@ svg {
     width: 22px;
     height: 22px;
 
-    @media (max-width: $width-mobile) {
+    @media (max-width: vars.$width-mobile) {
       width: 18px;
       height: 18px;
     }
@@ -32,75 +34,75 @@ svg {
 
   &--pill {
     background-color: transparent;
-    border: 2px solid $jambonz;
+    border: 2px solid vars.$jambonz;
 
     svg {
-      stroke: $jambonz;
+      stroke: vars.$jambonz;
     }
 
     &--dark {
-      border: 2px solid $charcoal;
+      border: 2px solid vars.$charcoal;
 
       svg {
-        stroke: $charcoal;
+        stroke: vars.$charcoal;
       }
     }
 
     &--blue {
-      border: 2px solid $blue;
+      border: 2px solid vars.$blue;
 
       svg {
-        stroke: $blue;
+        stroke: vars.$blue;
       }
     }
 
     &--teal {
-      border: 2px solid $teal;
+      border: 2px solid vars.$teal;
 
       svg {
-        stroke: $teal;
+        stroke: vars.$teal;
       }
     }
 
     &--purple {
-      border: 2px solid $purple;
+      border: 2px solid vars.$purple;
 
       svg {
-        stroke: $purple;
+        stroke: vars.$purple;
       }
     }
 
     &--white {
-      border: 2px solid $white;
+      border: 2px solid vars.$white;
 
       svg {
-        stroke: $white;
+        stroke: vars.$white;
       }
     }
   }
 
   &--fill {
     &--dark {
-      background-color: $charcoal;
+      background-color: vars.$charcoal;
     }
 
     &--blue {
-      background-color: $blue;
+      background-color: vars.$blue;
     }
 
     &--teal {
-      background-color: $teal;
+      background-color: vars.$teal;
     }
 
     &--purple {
-      background-color: $purple;
+      background-color: vars.$purple;
     }
 
     &--white {
-      background-color: $white;
+      background-color: vars.$white;
 
       svg {
-        stroke: $charcoal;
+        stroke: vars.$charcoal;
       }
     }
   }
@@ -109,14 +111,14 @@ svg {
 .icons {
   margin: 0 -16px;
 
-  @media (max-width: $width-mobile) {
+  @media (max-width: vars.$width-mobile) {
     margin: 0 -8px;
   }
 
   .icon {
     margin: 0 16px;
 
-    @media (max-width: $width-mobile) {
+    @media (max-width: vars.$width-mobile) {
       margin: 0 8px;
     }
   }
@@ -125,7 +127,7 @@ svg {
     .icon {
       margin: 16px;
   
-      @media (max-width: $width-mobile) {
+      @media (max-width: vars.$width-mobile) {
         margin: 8px;
       }
     }

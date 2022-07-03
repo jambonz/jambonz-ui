@@ -1,14 +1,17 @@
+@use 'vars';
+@use 'mixins';
+
 html,
 body {
-  font-family: $font-regular;
+  font-family: vars.$font-regular;
   letter-spacing: -0.02px;
-  color: $charcoal;
+  color: vars.$charcoal;
 }
 
 a {
-  color: $jambonz;
+  color: vars.$jambonz;
   text-decoration: none;
-  transition: color $base-dur $base-ease;
+  transition: color vars.$base-dur vars.$base-ease;
 }
 
 /*
@@ -42,18 +45,18 @@ a {
    *
    */
   svg {
-    @media (max-width: $width-tablet-1) {
+    @media (max-width: vars.$width-tablet-1) {
       width: 20px;
       height: 20px;
     }
 
-    @media (max-width: $width-tablet-2) {
+    @media (max-width: vars.$width-tablet-2) {
       width: 18px;
       height: 18px;
     }
 
     // @note: Consideration on stopping type reduction here
-    // @media (max-width: $width-mobile) {
+    // @media (max-width: vars.$width-mobile) {
     //   width: 16px;
     //   height: 16px;
     // }
@@ -61,69 +64,69 @@ a {
 }
 
 strong {
-  @include font-bold();
+  @include mixins.font-bold();
 }
 
 em {
-  font-family: $font-regular-italic;
+  font-family: vars.$font-regular-italic;
 }
 
 .h1, h1 {
-  @include h1();
+  @include mixins.h1();
 }
 
 .h2, h2 {
-  @include h2();
+  @include mixins.h2();
 }
 
 .h3, h3 {
-  @include h3();
+  @include mixins.h3();
 }
 
 .h4, h4 {
-  @include h4();
+  @include mixins.h4();
 }
 
 .h5, h5 {
-  @include h5();
+  @include mixins.h5();
 }
 
 .h6, h6 {
-  @include h6();
+  @include mixins.h6();
 }
 
 .p, p {
-  @include p();
+  @include mixins.p();
 }
 
 .m {
-  @include m();
+  @include mixins.m();
 }
 
 .ms {
-  @include ms();
+  @include mixins.ms();
 }
 
 .mxs {
-  @include mxs();
+  @include mixins.mxs();
 }
 
 .med {
-  @include font-medium();
+  @include mixins.font-medium();
 }
 
 .color--jambonz {
-  color: $jambonz;
+  color: vars.$jambonz;
 }
 
 .color--teal {
-  color: $teal;
+  color: vars.$teal;
 }
 
 .color--blue {
-  color: $blue;
+  color: vars.$blue;
 }
 
 .color--purple {
-  color: $purple;
+  color: vars.$purple;
 }

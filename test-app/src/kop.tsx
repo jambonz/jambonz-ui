@@ -2,7 +2,7 @@
 import React from 'react';
 
 /** Type imports */
-import type { Icon as IconType } from 'react-feather';
+import type { IconsMap } from './icons';
 
 /** Local imports */
 import {
@@ -26,10 +26,6 @@ const textString = `
   jambonz is the communications platform that brings your ideas to life. 
   So you can bring your best to your customers every day.
 `;
-
-interface IconsMap {
-  [key: string]: IconType;
-}
 
 type KitOfPartsProps = {
   Icons: IconsMap;

@@ -41,7 +41,7 @@ export default [
     ],
   },
 
-  // Built static dist for test-app, which is a React/TypeScript thing
+  // Build static dist for test-app, which is a React/TypeScript thing
   {
     input: './test-app/src/app.tsx',
     output: {

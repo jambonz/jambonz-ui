@@ -1,14 +1,18 @@
-import React, { useReducer } from 'react';
+/** Dep imports */
+import React from 'react';
 // import { Link } from 'react-router-dom';
 
+/** Local imports */
 import { Icons } from './icons';
 import { Button } from '../../src/js/index';
 import { KitOfParts } from './kop';
+import { useAppState } from './state';
 
-import { reducer, initialState } from './state';
+/** Type imports */
+import { AppStateTuple } from './state';
 
 export const HomePage = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch]: AppStateTuple = useAppState();
 
   const handleClick = () => {
     dispatch({ type: 'click' });

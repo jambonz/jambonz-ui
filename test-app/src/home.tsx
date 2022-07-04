@@ -14,7 +14,7 @@ import { AppStateTuple } from './state';
 export const HomePage = () => {
   const [state, dispatch]: AppStateTuple = useAppState();
 
-  const handleClick = () => {
+  const handleClick: React.PointerEventHandler<HTMLButtonElement> = (): void => {
     dispatch({ type: 'click' });
   };
 

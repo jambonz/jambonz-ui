@@ -1,5 +1,20 @@
-jambonz-ui
-===========
+<p align="center">
+  <a href="https://jambonz.org/docs/jambonz-ui/getting-started/">
+    <img src="https://www.jambonz.org/icon192.png" height="128">
+    <h1 align="center">Jambonz UI</h1>
+  </a>
+</p>
+
+<p align="center">
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/jambonz-ui">
+    <img alt="" src="https://img.shields.io/npm/v/jambonz-ui.svg?style=for-the-badge&labelColor=000000&color=da1c5c">
+  </a>
+  <a aria-label="License" href="./LICENSE">
+    <img alt="" src="https://img.shields.io/npm/l/jambonz-ui.svg?style=for-the-badge&labelColor=000000&color=30beb0">
+  </a>
+</p>
+
+## Overview
 
 The Jambonz UI library is a minimal, light-weight UI design package for 
 developing frontends for jambonz apps. It's a kit-of-parts including fonts, 

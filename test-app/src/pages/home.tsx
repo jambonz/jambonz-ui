@@ -1,12 +1,9 @@
 /** Dep imports */
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 /** Local imports */
-import { Icons } from './icons';
-import { Button } from '../../src/js/index';
-import { KitOfParts } from './kop';
-import { useAppState } from './state';
+import { Button } from '../../../src/js/index';
+import { useAppState } from '../state';
 
 export const HomePage = () => {
   const { state, dispatch } = useAppState();
@@ -16,16 +13,25 @@ export const HomePage = () => {
   };
 
   return (
-    <div className="homepage" style={{ textAlign: 'center' }}>
+    <section style={{
+      position: 'absolute',
+      top: 0,
+      width: '100%',
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+      zIndex: -1
+    }}>
       <div className="wrap">
         <div className="pad">
           <Button onClick={handleClick} subStyle="teal">
-            Click for simple state test: {state.clicks} clicks...
+            Click for simple state test: {state.clicks} clicks.
           </Button>
         </div>
       </div>
-      <KitOfParts Icons={Icons} />
-    </div>
+    </section>
   );
 };
 

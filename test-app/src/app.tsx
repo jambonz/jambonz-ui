@@ -10,8 +10,9 @@ import {
 } from 'react-router-dom';
 
 /** Local imports */
-import HomePage from './home';
-import TestPage from './test';
+import KOPPage from './pages/kop';
+import HomePage from './pages/home';
+import TestPage from './pages/test';
 import { StateProvider } from './state';
 
 /** Style imports */
@@ -19,7 +20,7 @@ import '../../src/styles/index.scss';
 
 const AppLayout = () => (
   <>
-    <nav className="wrap pad" style={{ textAlign: 'center' }}>
+    <nav className="wrap bg--dark" style={{ textAlign: 'center', paddingTop: '16px', paddingBottom: '16px', position: 'sticky', top: 0 }}>
       <ul style={{ display: 'flex', justifyContent: 'center' }}>
         <li style={{ padding: '8px' }}>
           <Link to="/">Home page</Link>
@@ -27,9 +28,14 @@ const AppLayout = () => (
         <li style={{ padding: '8px' }}>
           <Link to="/test">Test page</Link>
         </li>
+        <li style={{ padding: '8px' }}>
+          <Link to="/kop">KOP page</Link>
+        </li>
       </ul>
     </nav>
-    <Outlet />
+    <main>
+      <Outlet />
+    </main>
   </>
 );
 
@@ -41,6 +47,7 @@ const App = () => (
           <Route path="/" element={<AppLayout />}>
             <Route index element={<HomePage />} />
             <Route path="test" element={<TestPage />} />
+            <Route path="kop" element={<KOPPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

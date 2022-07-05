@@ -56,7 +56,6 @@ export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
   const { small = false, subStyle, mainStyle, ...restProps } = props;
   const classes: ClassNameMap = {
     'btn': true,
-    [`btn--${mainStyle}`]: true,
   };
 
   if (mainStyle) {

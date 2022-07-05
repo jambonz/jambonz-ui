@@ -45,6 +45,15 @@ for frontend stacks.
 npm install jambonz-ui # or yarn add jambonz-ui
 ```
 
+## Test-app
+
+To build and serve the `test-app`:
+
+```shell
+# changes are rebuilt but no HMR or live reload currently...
+yarn watch
+```
+
 ## Publishing
 
 Always follow these steps to publish this package: 

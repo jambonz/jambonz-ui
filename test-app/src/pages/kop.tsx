@@ -1,10 +1,8 @@
 /** Peer dep imports */
 import React from 'react';
 
-/** Type imports */
-import type { IconsMap } from './icons';
-
 /** Local imports */
+import { Icons } from '../icons';
 import {
   P,
   M,
@@ -20,20 +18,16 @@ import {
   Button,
   IconGroup,
   ButtonGroup,
-} from '../../src/js/index';
+} from '../../../src/js/index';
 
 const textString = `
   jambonz is the communications platform that brings your ideas to life. 
   So you can bring your best to your customers every day.
 `;
 
-type KitOfPartsProps = {
-  Icons: IconsMap;
-};
-
-export function KitOfParts({ Icons }: KitOfPartsProps) {
+export const KOPPage = () => {
   return (
-    <div className="kop" style={{ textAlign: 'center' }}>
+    <section style={{ textAlign: 'center' }}>
       {/** Typography */}
       <div className="kop__typography">
         <div className="pad bg--black">
@@ -249,6 +243,8 @@ export function KitOfParts({ Icons }: KitOfPartsProps) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
+
+export default KOPPage;

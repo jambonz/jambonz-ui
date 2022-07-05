@@ -5,12 +5,13 @@ svg {
 }
 
 .ico {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: vars.$jambonz;
   width: vars.$icon-size-1;
   height: vars.$icon-size-1;
   border-radius: 100%;
-  position: relative;
 
   @media (max-width: vars.$width-mobile) {
     width: vars.$icon-size-2;
@@ -19,10 +20,6 @@ svg {
 
   svg {
     stroke: vars.$white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 22px;
     height: 22px;
 

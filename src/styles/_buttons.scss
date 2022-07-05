@@ -2,6 +2,7 @@
 @use 'mixins';
 
 .btn {
+  @include mixins.font-bold();
   font-size: vars.$m-size;
   line-height: 1;
   padding: 23px 64px 21px;
@@ -15,7 +16,6 @@
   transition: background-color vars.$base-dur vars.$base-ease,
               border-color vars.$base-dur vars.$base-ease,
               color vars.$base-dur vars.$base-ease;
-  @include mixins.font-bold();
 
   &:hover {
     background-color: mix(vars.$pink, vars.$jambonz, vars.$mix-amount);
@@ -25,121 +25,56 @@
     font-size: vars.$ms-size;
   }
 
-  // @note: Consideration on stopping type reduction here
-  // @media (max-width: vars.$width-mobile) {
-  //   font-size: vars.$mxs-size;
-  // }
+  &--dark {
+    background-color: vars.$dark;
 
-  &--login {
-    font-family: vars.$font-medium;
-    font-size: vars.$ms-size;
+    &:hover {
+      background-color: mix(vars.$white, vars.$dark, vars.$mix-amount);
+    }
+  }
+
+  &--blue {
+    background-color: vars.$blue;
+
+    &:hover {
+      background-color: mix(vars.$white, vars.$blue, vars.$mix-amount);
+    }
+  }
+
+  &--teal {
+    background-color: vars.$teal;
+
+    &:hover {
+      background-color: mix(vars.$white, vars.$teal, vars.$mix-amount);
+    }
+  }
+
+  &--purple {
+    background-color: vars.$purple;
+
+    &:hover {
+      background-color: mix(vars.$white, vars.$purple, vars.$mix-amount);
+    }
+  }
+
+  &--white {
+    background-color: vars.$white;
+    color: vars.$jambonz;
+
+    &:hover {
+      background-color: mix(vars.$grey-light, vars.$white, vars.$mix-amount);
+    }
+  }
+
+  &--hollow {
+    font-family: vars.$font-regular;
     background-color: transparent;
     border: 2px solid vars.$jambonz;
     color: vars.$jambonz;
-    padding: 10px 26px;
-
-    &:hover {
-      background-color: vars.$jambonz;
-      color: vars.$white;
-    }
-
-    &--blue {
-      color: vars.$blue;
-      border-color: vars.$blue;
-
-      &:hover {
-        background-color: vars.$blue;
-        color: vars.$white;
-      }
-    }
-
-    &--teal {
-      color: vars.$teal;
-      border-color: vars.$teal;
-
-      &:hover {
-        background-color: vars.$teal;
-        color: vars.$white;
-      }
-    }
-
-    &--purple {
-      color: vars.$purple;
-      border-color: vars.$purple;
-
-      &:hover {
-        background-color: vars.$purple;
-        color: vars.$white;
-      }
-    }
-
-    &--white {
-      color: vars.$white;
-      border-color: vars.$white;
-
-      &:hover {
-        background-color: vars.$white;
-        color: vars.$charcoal;
-      }
-    }
-
-    @media (max-width: vars.$width-tablet-2) {
-      font-size: vars.$mxs-size;
-    }
-  }
-
-  &--fill {
-    &--dark {
-      background-color: vars.$charcoal;
-
-      &:hover {
-        background-color: mix(vars.$white, vars.$charcoal, vars.$mix-amount);
-      }
-    }
-
-    &--blue {
-      background-color: vars.$blue;
-
-      &:hover {
-        background-color: mix(vars.$white, vars.$blue, vars.$mix-amount);
-      }
-    }
-
-    &--teal {
-      background-color: vars.$teal;
-
-      &:hover {
-        background-color: mix(vars.$white, vars.$teal, vars.$mix-amount);
-      }
-    }
-
-    &--purple {
-      background-color: vars.$purple;
-
-      &:hover {
-        background-color: mix(vars.$white, vars.$purple, vars.$mix-amount);
-      }
-    }
-
-    &--white {
-      background-color: vars.$white;
-      color: vars.$jambonz;
-
-      &:hover {
-        background-color: mix(vars.$grey-light, vars.$white, vars.$mix-amount);
-      }
-    }
-  }
-
-  &--pill {
-    font-family: vars.$font-regular;
-    background-color: transparent;
-    border: 2px solid vars.$charcoal;
-    color: vars.$charcoal;
     padding: 18px 32px 17px;
 
     &:hover {
-      background-color: vars.$charcoal;
+      background-color: vars.$jambonz;
       color: vars.$white;
     }
 
@@ -170,12 +105,16 @@
       }
     }
 
-    &--jambonz {
-      border-color: vars.$jambonz;
-      color: vars.$jambonz;
+    &.btn--dark {
+      border-color: vars.$dark;
+      color: vars.$dark;
+      
+      svg {
+        stroke: vars.$dark;
+      }
 
       &:hover {
-        background-color: vars.$jambonz;
+        background-color: vars.$dark;
         color: vars.$white;
 
         svg {
@@ -183,14 +122,15 @@
         }
       }
 
-      svg {
-        stroke: vars.$jambonz;
-      }
     }
 
-    &--blue {
+    &.btn--blue {
       border-color: vars.$blue;
       color: vars.$blue;
+
+      svg {
+        stroke: vars.$blue;
+      }
 
       &:hover {
         background-color: vars.$blue;
@@ -200,15 +140,15 @@
           stroke: vars.$white;
         }
       }
-
-      svg {
-        stroke: vars.$blue;
-      }
     }
 
-    &--teal {
+    &.btn--teal {
       border-color: vars.$teal;
       color: vars.$teal;
+
+      svg {
+        stroke: vars.$teal;
+      }
 
       &:hover {
         background-color: vars.$teal;
@@ -218,15 +158,15 @@
           stroke: vars.$white;
         }
       }
-
-      svg {
-        stroke: vars.$teal;
-      }
     }
 
-    &--purple {
+    &.btn--purple {
       border-color: vars.$purple;
       color: vars.$purple;
+
+      svg {
+        stroke: vars.$purple;
+      }
 
       &:hover {
         background-color: vars.$purple;
@@ -236,40 +176,46 @@
           stroke: vars.$white;
         }
       }
-
-      svg {
-        stroke: vars.$purple;
-      }
     }
 
-    &--white {
+    &.btn--white {
       border-color: vars.$white;
       color: vars.$white;
-
-      &:hover {
-        background-color: vars.$white;
-        color: vars.$charcoal;
-
-        svg {
-          stroke: vars.$charcoal;
-        }
-      }
 
       svg {
         stroke: vars.$white;
       }
+
+      &:hover {
+        background-color: vars.$white;
+        color: vars.$dark;
+
+        svg {
+          stroke: vars.$dark;
+        }
+      }
+    }
+  }
+
+  &--small {
+    font-family: vars.$font-medium;
+    font-size: vars.$ms-size;
+    padding: 10px 26px;
+
+    @media (max-width: vars.$width-tablet-2) {
+      font-size: vars.$mxs-size;
     }
   }
 }
 
-.btn:not(.btn--pill, .btn--login) {
+.btn:not(.btn--hollow, .btn--small) {
   @media (max-width: vars.$width-tablet-2) {
     padding: 18px 46px;
   }
 }
 
 .btns {
-  margin: 0 -2.2222222222vw;
+  margin: 0 calc(-#{vars.$width-padding} / 2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -279,7 +225,7 @@
   }
 
   .btn {
-    margin: 0 2.2222222222vw;
+    margin: 0 calc(#{vars.$width-padding} / 2);
 
     &:not(:first-child) {
       @media (max-width: vars.$width-mobile) {

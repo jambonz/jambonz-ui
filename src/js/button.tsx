@@ -15,11 +15,12 @@ import type { mainStyles, subStyles, DivProps } from './common';
 
 /** Common props for all versions */
 interface CommonProps {
-  children: React.ReactNode;
+  /** For obvious reasons */
+  small?: boolean;
   /** See type subStyles */
-  subStyle?: subStyles | 'jambonz';
+  subStyle?: subStyles;
   /** See type mainStyles */
-  mainStyle?: mainStyles | 'login';
+  mainStyle?: mainStyles;
 }
 
 /** Button props, e.g. type="submit" | disabled etc... */
@@ -52,48 +53,44 @@ export function Button(props: ButtonProps): JSX.Element;
 export function Button(props: NextLinkProps): JSX.Element;
 export function Button(props: RouterLinkProps): JSX.Element;
 export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
-  const { subStyle, mainStyle = 'fill', ...restProps } = props;
+  const { small = false, subStyle, mainStyle, ...restProps } = props;
   const classes: ClassNameMap = {
     'btn': true,
     [`btn--${mainStyle}`]: true,
   };
 
+  if (mainStyle) {
+    classes[`btn--${mainStyle}`] = true;
+  }
+
   if (subStyle) {
-    classes[`btn--${mainStyle}--${subStyle}`] = true;
+    classes[`btn--${subStyle}`] = true;
+  }
+
+  if (small) {
+    classes['btn--small'] = true;
   }
 
   /** For <Link> from `react-router-dom` */
   if ('to' in restProps) {
-    const { as: Link, to, children, ...rest } = (restProps as RouterLinkProps);
+    const { as: Link, to, ...rest } = (restProps as RouterLinkProps);
 
-    return (
-      <Link {...rest} to={to} className={classNames(classes)}>
-        {children}
-      </Link>
-    );
+    return <Link {...rest} to={to} className={classNames(classes)} />;
   }
 
   /** For <Link> from `next/link` */
   if ('href' in restProps) {
-    const { as: Link, href, children, ...rest } = (restProps as NextLinkProps);
+    const { as: Link, href, ...rest } = (restProps as NextLinkProps);
 
     return (
       <Link href={href}>
-        <a {...rest} className={classNames(classes)}>
-          {children}
-        </a>
+        <a {...rest} className={classNames(classes)} />
       </Link>
     );
   }
 
   /** Just a <button> ... */
-  const { children, ...rest } = (restProps as ButtonProps);
-
-  return (
-    <button {...rest} className={classNames(classes)}>
-      {children}
-    </button>
-  );
+  return <button {...restProps as ButtonProps} className={classNames(classes)} />;
 }
 
 /** Button Groupings, uses <div /> with className */

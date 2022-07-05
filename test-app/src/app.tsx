@@ -2,6 +2,7 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
+  Link,
   Route,
   Outlet,
   Routes,
@@ -10,23 +11,40 @@ import {
 
 /** Local imports */
 import HomePage from './home';
+import TestPage from './test';
+import { StateProvider } from './state';
 
 /** Style imports */
-import '../../pkg/public/css/styles.css';
+import '../../src/styles/index.scss';
 
 const AppLayout = () => (
-  <Outlet />
+  <>
+    <nav className="wrap pad" style={{ textAlign: 'center' }}>
+      <ul style={{ display: 'flex', justifyContent: 'center' }}>
+        <li style={{ padding: '8px' }}>
+          <Link to="/">Home page</Link>
+        </li>
+        <li style={{ padding: '8px' }}>
+          <Link to="/test">Test page</Link>
+        </li>
+      </ul>
+    </nav>
+    <Outlet />
+  </>
 );
 
 const App = () => (
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<HomePage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <StateProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="test" element={<TestPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </StateProvider>
   </StrictMode>
 );
 

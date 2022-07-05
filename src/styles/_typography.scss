@@ -5,13 +5,21 @@ html,
 body {
   font-family: vars.$font-regular;
   letter-spacing: -0.02px;
-  color: vars.$charcoal;
+  color: vars.$dark;
 }
 
 a {
   color: vars.$jambonz;
   text-decoration: none;
   transition: color vars.$base-dur vars.$base-ease;
+}
+
+strong {
+  @include mixins.font-bold();
+}
+
+em {
+  font-family: vars.$font-regular-italic;
 }
 
 /*
@@ -54,21 +62,7 @@ a {
       width: 18px;
       height: 18px;
     }
-
-    // @note: Consideration on stopping type reduction here
-    // @media (max-width: vars.$width-mobile) {
-    //   width: 16px;
-    //   height: 16px;
-    // }
   }
-}
-
-strong {
-  @include mixins.font-bold();
-}
-
-em {
-  font-family: vars.$font-regular-italic;
 }
 
 .h1, h1 {
@@ -111,22 +105,49 @@ em {
   @include mixins.mxs();
 }
 
+.m,
+.ms,
+.mxs,
+.p, p,
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4,
+.h5, h5,
+.h6, h6 {
+  span {
+    color: vars.$jambonz;
+  }
+}
+
 .med {
   @include mixins.font-medium();
 }
 
-.color--jambonz {
+.txt--jam {
   color: vars.$jambonz;
 }
 
-.color--teal {
+.txt--teal {
   color: vars.$teal;
 }
 
-.color--blue {
+.txt--blue {
   color: vars.$blue;
 }
 
-.color--purple {
+.txt--purple {
   color: vars.$purple;
+}
+
+.txt--white {
+  color: vars.$white;
+}
+
+.txt--red {
+  color: vars.$red;
+}
+
+.txt--green {
+  color: vars.$green;
 }

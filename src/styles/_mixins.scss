@@ -99,10 +99,6 @@
   letter-spacing: -0.03px;
   @include font-medium();
 
-  span {
-    color: vars.$jambonz;
-  }
-
   @media (max-width: vars.$width-tablet-1) {
     font-size: vars.$h6-size;
   }

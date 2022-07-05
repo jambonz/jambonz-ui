@@ -17,24 +17,24 @@ type IconProps = DivProps & {
 };
 
 export function Icon({
-  children,
   subStyle,
-  mainStyle = 'fill',
+  mainStyle,
   ...rest
 }: IconProps) {
   const classes: ClassNameMap = {
-    'icon': true,
-    [`icon--${mainStyle}`]: true,
+    'ico': true,
   };
 
+  if (mainStyle) {
+    classes[`ico--${mainStyle}`] = true;
+  }
+
   if (subStyle) {
-    classes[`icon--${mainStyle}--${subStyle}`] = true;
+    classes[`ico--${subStyle}`] = true;
   }
 
   return (
-    <div {...rest} className={classNames(classes)}>
-      {children}
-    </div>
+    <div {...rest} className={classNames(classes)} />
   );
 }
 
@@ -50,8 +50,8 @@ export function IconGroup({
   className = ''
 }: IconGroupProps) {
   const classes: ClassNameMap = {
-    'icons': true,
-    'icons--set': set,
+    'icos': true,
+    'icos--set': set,
   };
 
   if (className) {

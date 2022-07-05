@@ -1,4 +1,4 @@
-import css from 'rollup-plugin-css-only';
+import scss from 'rollup-plugin-scss';
 import gzipPlugin from 'rollup-plugin-gzip';
 import { babel } from '@rollup/plugin-babel';
 import replace from '@rollup/plugin-replace';
@@ -62,7 +62,9 @@ export default [
       }),
       resolve(),
       commonjs(),
-      css({ output: 'styles.css' })
+      scss({
+        output: './test-app/dist/styles.css',
+      })
     ],
   }
 ];

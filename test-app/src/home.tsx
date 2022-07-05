@@ -8,11 +8,8 @@ import { Button } from '../../src/js/index';
 import { KitOfParts } from './kop';
 import { useAppState } from './state';
 
-/** Type imports */
-import { AppStateTuple } from './state';
-
 export const HomePage = () => {
-  const [state, dispatch]: AppStateTuple = useAppState();
+  const { state, dispatch } = useAppState();
 
   const handleClick: React.PointerEventHandler<HTMLButtonElement> = (): void => {
     dispatch({ type: 'click' });

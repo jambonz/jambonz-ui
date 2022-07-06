@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://jambonz.org/docs/jambonz-ui/getting-started/">
+  <a href="https://jambonz.org/docs/jambonz-ui/">
     <img src="https://www.jambonz.org/icon192.png" height="128">
     <h1 align="center">Jambonz UI</h1>
   </a>
@@ -70,5 +70,5 @@ cd pkg && npm publish
 
 ## Documentation
 
-Best to just check out the [jambonz-ui docs](https://jambonz.org/docs/jambonz-ui/getting-started/) 
+Best to just check out the [jambonz-ui docs](https://jambonz.org/docs/jambonz-ui/) 
 for a more in-depth resource.

@@ -1,6 +1,7 @@
 /** Dep imports */
 import React, { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+// import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import {
   Link,
   Route,
@@ -56,6 +57,7 @@ const App = () => (
 );
 
 export const elem = document.getElementById('root') as HTMLElement;
-export const root = createRoot(elem);
+// export const root = createRoot(elem);
 
-root.render(<App />);
+// root.render(<App />);
+ReactDOM.render(<App />, elem);

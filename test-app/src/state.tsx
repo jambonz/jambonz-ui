@@ -15,7 +15,7 @@ interface Action {
 
 type Dispatcher = (action: Action) => void;
 
-type AppStateTuple = [State, Dispatcher];
+type UseAppState = [State, Dispatcher];
 
 export interface AppStateContext {
   /** Actual state object */
@@ -38,7 +38,7 @@ function reducer(state: State, action: Action): State {
 const StateContext = React.createContext<AppStateContext>(null!);
 
 export const StateProvider = ({ children }) => {
-  const [state, dispatch]: AppStateTuple = useReducer(reducer, initialState);
+  const [state, dispatch]: UseAppState = useReducer(reducer, initialState);
   const value: AppStateContext = { state, dispatch };
 
   return (
@@ -49,6 +49,6 @@ export const StateProvider = ({ children }) => {
 };
 
 /** Shallow wrapper for vanilla state as the `global store` */
-export function useAppState() {
+export function useAppState(): AppStateContext {
   return useContext(StateContext);
 }

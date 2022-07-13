@@ -50,7 +50,7 @@ export default [
     },
     plugins: [
       sucrase({
-        exclude: ['node_modules/**', '**/*.css'],
+        exclude: ['node_modules/**', '**/*.scss'],
         transforms: ['typescript', 'jsx'],
       }),
       typescript({

@@ -3,6 +3,7 @@
 
 .btn {
   @include mixins.font-bold();
+  white-space: nowrap;
   font-size: vars.$m-size;
   line-height: 1;
   padding: 23px 64px 21px;
@@ -62,7 +63,17 @@
     color: vars.$jambonz;
 
     &:hover {
-      background-color: mix(vars.$grey-light, vars.$white, vars.$mix-amount);
+      background-color: mix(vars.$grey, vars.$white, vars.$mix-amount);
+    }
+  }
+
+  &[disabled] {
+    background-color: vars.$grey;
+    cursor: default;
+    color: vars.$white;
+
+    &:hover {
+      background-color: vars.$grey;
     }
   }
 
@@ -192,6 +203,27 @@
 
         svg {
           stroke: vars.$dark;
+        }
+      }
+    }
+
+    &[disabled] {
+      background-color: transparent;
+      border-color: vars.$grey;
+      cursor: default;
+      color: vars.$grey;
+
+      svg {
+        stroke: vars.$grey;
+      }
+  
+      &:hover {
+        background-color: transparent;
+        border-color: vars.$grey;
+        color: vars.$grey;
+
+        svg {
+          stroke: vars.$grey;
         }
       }
     }

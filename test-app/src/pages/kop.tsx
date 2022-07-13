@@ -195,7 +195,7 @@ export const KOPPage = () => {
           <ButtonGroup className="pad">
             <Button subStyle="purple">Do it</Button>
             <Button subStyle="teal">Do it</Button>
-            <Button subStyle="blue">Do it</Button>
+            <Button subStyle="blue" disabled>Do it</Button>
           </ButtonGroup>
         </div>
         <div className="bg--dark">
@@ -205,6 +205,7 @@ export const KOPPage = () => {
               <Button mainStyle="hollow" subStyle="purple">styles</Button>
               <Button mainStyle="hollow" subStyle="teal">styles</Button>
               <Button mainStyle="hollow" subStyle="blue">styles</Button>
+              <Button mainStyle="hollow" disabled>styles</Button>
             </ButtonGroup>
           </div>
         </div>
@@ -214,7 +215,7 @@ export const KOPPage = () => {
               <Icons.GitHub />
               <span>github.com/jambonz</span>
             </Button>
-            <Button mainStyle="hollow" subStyle="dark">
+            <Button mainStyle="hollow" subStyle="dark" disabled>
               <Icons.GitHub />
               <span>github.com/drachtio</span>
             </Button>

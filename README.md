@@ -30,9 +30,11 @@ well as [atomic design](https://bradfrost.com/blog/post/atomic-web-design/)
 materials like buttons, icons etc. A primary goal of the library is to 
 have a small footprint. Current sizes:
 
+View on [bundlephobia](https://bundlephobia.com/package/jambonz-ui)
+
 | Output format | CSS size | JS size |
 |---------------|----------|---------|
-| Minified and Gzipped | `2 KB` | `631 bytes` |
+| Minified and Gzipped | `2 KB` | `725 bytes` |
 | Minified | `11 KB` | `2 KB` |
 | Compiled | `15 KB` | `4 KB` |
 

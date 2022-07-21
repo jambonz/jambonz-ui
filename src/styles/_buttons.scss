@@ -69,7 +69,7 @@
 
   &[disabled] {
     background-color: vars.$grey;
-    cursor: default;
+    cursor: not-allowed;
     color: vars.$white;
 
     &:hover {

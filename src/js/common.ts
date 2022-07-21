@@ -7,7 +7,7 @@ import React from 'react';
 export type mainStyles = 'hollow';
 
 /** Valid styles for sub classing, as in `btn--fill--dark` */
-export type subStyles = 'dark' | 'blue' | 'teal' | 'purple' | 'white';
+export type subStyles = 'dark' | 'blue' | 'teal' | 'purple' | 'white' | 'grey';
 
 /** HTML divs, as in <div />  */
 export type DivProps = React.HTMLAttributes<HTMLDivElement>;

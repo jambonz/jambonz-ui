@@ -67,6 +67,15 @@
     }
   }
 
+  &--grey {
+    background-color: vars.$grey;
+    color: vars.$white;
+
+    &:hover {
+      background-color: mix(vars.$white, vars.$grey, vars.$mix-amount);
+    }
+  }
+
   &[disabled] {
     background-color: vars.$grey;
     cursor: not-allowed;
@@ -207,10 +216,28 @@
       }
     }
 
+    &.btn--grey {
+      border-color: vars.$grey;
+      color: vars.$grey;
+
+      svg {
+        stroke: vars.$grey;
+      }
+
+      &:hover {
+        background-color: vars.$grey;
+        color: vars.$white;
+
+        svg {
+          stroke: vars.$white;
+        }
+      }
+    }
+
     &[disabled] {
       background-color: transparent;
       border-color: vars.$grey;
-      cursor: default;
+      cursor: not-allowed;
       color: vars.$grey;
 
       svg {

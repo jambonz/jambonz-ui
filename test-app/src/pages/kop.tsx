@@ -168,6 +168,7 @@ export const KOPPage = () => {
               <Button small subStyle="purple">Log In</Button>
               <Button small subStyle="teal">Log In</Button>
               <Button small subStyle="blue">Log In</Button>
+              <Button small subStyle="grey">Log In</Button>
             </ButtonGroup>
           </div>
         </div>

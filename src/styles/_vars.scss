@@ -10,6 +10,7 @@ $teal: #30beb0;
 $blue: #006dff;
 $green: #008a1a;
 $red: #e10e22;
+
 $mix-amount: 25%;
 
 $font-regular: 'objectivityregular';
@@ -22,6 +23,12 @@ $font-black: 'objectivityblack';
 $font-black-italic: 'objectivityblack_slanted';
 $font-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
+$letter-space-1: -0.02px;
+$letter-space-2: -0.03px;
+$letter-space-3: -0.04px;
+$letter-space-4: -0.05px;
+$letter-space-5: -0.06px;
+
 $h1-size: 3rem;
 $h2-size: 2.5rem;
 $h3-size: 2.25rem;
@@ -33,16 +40,96 @@ $m-size: 1rem;
 $ms-size: 0.875rem;
 $mxs-size: 0.75rem;
 
+$px00: 4px;
+$px01: 8px;
+$px02: 16px;
+$px03: 32px;
+$px04: 64px;
+$px05: 96px;
+
+$svg00: 18px;
+$svg01: 20px;
+
 $icon-size-1: $h1-size;
 $icon-size-2: $h2-size;
 $icon-size-3: $h3-size;
 
-$width-max: 1440px;
+$width-laptop: 1440px;
 $width-tablet-1: 1024px;
 $width-tablet-2: 768px;
 $width-mobile: 640px;
 $width-small: 480px;
 $width-padding: 4.4444444444vw;
+$width-border: 2px;
 
 $base-dur: 200ms;
 $base-ease: ease;
+
+:root {
+  --black: #{$black};
+  --white: #{$white};
+  --dark: #{$dark};
+  --grey: #{$grey};
+  --grey-light: #{$grey-light};
+  --jambonz: #{$jambonz};
+  --pink: #{$pink};
+  --purple: #{$purple};
+  --teal: #{$teal};
+  --blue: #{$blue};
+  --green: #{$green};
+  --red: #{$red};
+
+  --mix-amount: #{$mix-amount};
+
+  --font-regular: #{$font-regular};
+  --font-regular-italic: #{$font-regular-italic};
+  --font-medium: #{$font-medium};
+  --font-medium-italic: #{$font-medium-italic};
+  --font-bold: #{$font-bold};
+  --font-bold-italic: #{$font-bold-italic};
+  --font-black: #{$font-black};
+  --font-black-italic: #{$font-black-italic};
+  --font-mono: #{$font-mono};
+
+  --letter-space-1: #{$letter-space-1};
+  --letter-space-2: #{$letter-space-2};
+  --letter-space-3: #{$letter-space-3};
+  --letter-space-4: #{$letter-space-4};
+  --letter-space-5: #{$letter-space-5};
+
+  --h1-size: #{$h1-size};
+  --h2-size: #{$h2-size};
+  --h3-size: #{$h3-size};
+  --h4-size: #{$h4-size};
+  --h5-size: #{$h5-size};
+  --h6-size: #{$h6-size};
+  --p-size: #{$p-size};
+  --m-size: #{$m-size};
+  --ms-size: #{$ms-size};
+  --mxs-size: #{$mxs-size};
+
+  --px00: #{$px00};
+  --px01: #{$px01};
+  --px02: #{$px02};
+  --px03: #{$px03};
+  --px04: #{$px04};
+  --px05: #{$px05};
+
+  --svg00: #{$svg00};
+  --svg01: #{$svg01};
+
+  --icon-size-1: #{$icon-size-1};
+  --icon-size-2: #{$icon-size-2};
+  --icon-size-3: #{$icon-size-3};
+
+  --width-laptop: #{$width-laptop};
+  --width-tablet-1: #{$width-tablet-1};
+  --width-tablet-2: #{$width-tablet-2};
+  --width-mobile: #{$width-mobile};
+  --width-small: #{$width-small};
+  --width-padding: #{$width-padding};
+  --width-border: #{$width-border};
+
+  --base-dur: #{$base-dur};
+  --base-ease: #{$base-ease};
+}

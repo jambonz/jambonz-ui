@@ -4,7 +4,7 @@
 html,
 body {
   font-family: vars.$font-regular;
-  letter-spacing: -0.02px;
+  letter-spacing: vars.$letter-space-1;
   color: vars.$dark;
 }
 
@@ -33,11 +33,11 @@ em {
   }
 
   svg:last-child {
-    margin-left: 8px;
+    margin-left: vars.$px01;
   }
 
   svg:first-child {
-    margin-right: 8px;
+    margin-right: vars.$px01;
   }
   
   /*
@@ -54,13 +54,13 @@ em {
    */
   svg {
     @media (max-width: vars.$width-tablet-1) {
-      width: 20px;
-      height: 20px;
+      width: vars.$svg01;
+      height: vars.$svg01;
     }
 
     @media (max-width: vars.$width-tablet-2) {
-      width: 18px;
-      height: 18px;
+      width: vars.$svg00;
+      height: vars.$svg00;
     }
   }
 }
@@ -150,4 +150,8 @@ em {
 
 .txt--green {
   color: vars.$green;
+}
+
+.txt--grey {
+  color: vars.$grey;
 }

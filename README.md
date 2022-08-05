@@ -43,7 +43,7 @@ Installing the package is easy. You can use any typical package manager
 for frontend stacks.
 
 ```shell
-npm install jambonz-ui # or yarn add jambonz-ui
+npm i jambonz-ui # or yarn add jambonz-ui
 ```
 
 ## Test-app
@@ -52,7 +52,7 @@ To build and serve the `test-app`:
 
 ```shell
 # changes are rebuilt but no HMR or live reload currently...
-yarn watch
+npm run watch
 ```
 
 ## Publishing
@@ -63,7 +63,7 @@ Always follow these steps to publish this package:
 ```shell
 # build and package
 # generates the `pkg` directory
-yarn build
+npm run build
 
 # publish the `pkg`
 cd pkg && npm publish

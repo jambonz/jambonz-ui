@@ -55,14 +55,14 @@ svg {
 
   &--hollow {
     background-color: transparent;
-    border: 2px solid vars.$jambonz;
+    border: vars.$width-border solid vars.$jambonz;
 
     svg {
       stroke: vars.$jambonz;
     }
 
     &.ico--dark {
-      border: 2px solid vars.$dark;
+      border-color: vars.$dark;
 
       svg {
         stroke: vars.$dark;
@@ -70,7 +70,7 @@ svg {
     }
 
     &.ico--blue {
-      border: 2px solid vars.$blue;
+      border-color: vars.$blue;
 
       svg {
         stroke: vars.$blue;
@@ -78,7 +78,7 @@ svg {
     }
 
     &.ico--teal {
-      border: 2px solid vars.$teal;
+      border-color: vars.$teal;
 
       svg {
         stroke: vars.$teal;
@@ -86,7 +86,7 @@ svg {
     }
 
     &.ico--purple {
-      border: 2px solid vars.$purple;
+      border-color: vars.$purple;
 
       svg {
         stroke: vars.$purple;
@@ -94,7 +94,7 @@ svg {
     }
 
     &.ico--white {
-      border: 2px solid vars.$white;
+      border-color: vars.$white;
 
       svg {
         stroke: vars.$white;
@@ -104,27 +104,16 @@ svg {
 }
 
 .icos {
-  margin: 0 -16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: vars.$px02;
 
   @media (max-width: vars.$width-mobile) {
-    margin: 0 -8px;
-  }
-
-  .ico {
-    margin: 0 16px;
-
-    @media (max-width: vars.$width-mobile) {
-      margin: 0 8px;
-    }
+    grid-gap: vars.$px01;
   }
 
   &--set {
-    .ico {
-      margin: 16px;
-  
-      @media (max-width: vars.$width-mobile) {
-        margin: 8px;
-      }
-    }
+    flex-wrap: wrap;
   }
 }

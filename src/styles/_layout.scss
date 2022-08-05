@@ -1,20 +1,18 @@
 @use 'vars';
 
 .wrap {
-  max-width: calc(#{vars.$width-max} + #{vars.$width-padding} * 2);
   width: 100%;
-  margin: 0 auto;
   padding-left: vars.$width-padding;
   padding-right: vars.$width-padding;
 }
 
 .pad {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: vars.$px05;
+  padding-bottom: vars.$px05;
 
   @media (max-width: vars.$width-tablet-1) {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: vars.$px04;
+    padding-bottom: vars.$px04;
   }
 
   img {
@@ -23,17 +21,17 @@
 }
 
 .pad-b {
-  padding-bottom: 96px;
+  padding-bottom: vars.$px05;
 
   @media (max-width: vars.$width-tablet-1) {
-    padding-bottom: 64px;
+    padding-bottom: vars.$px04;
   }
 }
 
 .pad-t {
-  padding-top: 96px;
+  padding-top: vars.$px05;
 
   @media (max-width: vars.$width-tablet-1) {
-    padding-top: 64px;
+    padding-top: vars.$px04;
   }
 }

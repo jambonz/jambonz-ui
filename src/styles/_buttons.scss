@@ -6,7 +6,7 @@
   white-space: nowrap;
   font-size: vars.$m-size;
   line-height: 1;
-  padding: 23px 64px 21px;
+  padding: 23px vars.$px04 21px;
   background-color: vars.$jambonz;
   color: vars.$white;
   border: none;
@@ -89,9 +89,9 @@
   &--hollow {
     font-family: vars.$font-regular;
     background-color: transparent;
-    border: 2px solid vars.$jambonz;
+    border: vars.$width-border solid vars.$jambonz;
     color: vars.$jambonz;
-    padding: 18px 32px 17px;
+    padding: 18px vars.$px03 17px;
 
     &:hover {
       background-color: vars.$jambonz;
@@ -99,7 +99,7 @@
     }
 
     @media (max-width: vars.$width-mobile) {
-      padding: 15px 32px 16px;
+      padding: 15px vars.$px03 vars.$px02;
     }
     
     svg, span {
@@ -108,14 +108,14 @@
     }
 
     svg {
-      margin-right: 16px;
+      margin-right: vars.$px02;
       width: 18px;
       height: 18px;
 
       @media (max-width: vars.$width-tablet-2) {
         margin-right: 12px;
-        width: 16px;
-        height: 16px;
+        width: vars.$px02;
+        height: vars.$px02;
       }
 
       @media (max-width: vars.$width-mobile) {
@@ -274,26 +274,13 @@
 }
 
 .btns {
-  margin: 0 calc(-#{vars.$width-padding} / 2);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: vars.$px02;
 
   @media (max-width: vars.$width-mobile) {
     flex-direction: column;
-  }
-
-  .btn {
-    margin: 0 calc(#{vars.$width-padding} / 2);
-
-    &:not(:first-child) {
-      @media (max-width: vars.$width-mobile) {
-        margin-top: 16px;
-      }
-    }
-
-    @media (max-width: vars.$width-mobile) {
-      margin: 0;
-    }
   }
 }

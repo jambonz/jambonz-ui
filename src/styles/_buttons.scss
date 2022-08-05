@@ -280,6 +280,14 @@
   flex-wrap: wrap;
   grid-gap: vars.$px02;
 
+  &--left {
+    justify-content: flex-start;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+
   @media (max-width: vars.$width-mobile) {
     flex-direction: column;
   }

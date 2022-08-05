@@ -93,10 +93,23 @@ export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
 }
 
 /** Button Groupings, uses <div /> with className */
-export function ButtonGroup({ children, className = '' }: DivProps) {
+type GroupProps = DivProps & {
+  /** Applies flex position */
+  left?: boolean;
+  /** Applies flex position */
+  right?: boolean;
+}
+
+export function ButtonGroup({ left = false, right = false, children, className = '' }: GroupProps) {
   const classes: ClassNameMap = {
     'btns': true,
   };
+
+  if (left) {
+    classes['btns--left'] = true;
+  } else if (right) {
+    classes['btns--right'] = true;
+  }
 
   if (className) {
     className.split(' ').forEach(c => classes[c] = true);

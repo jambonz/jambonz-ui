@@ -1,0 +1,70 @@
+@use 'vars';
+
+:root {
+  --black: #{vars.$black};
+  --white: #{vars.$white};
+  --dark: #{vars.$dark};
+  --grey: #{vars.$grey};
+  --grey-light: #{vars.$grey-light};
+  --jambonz: #{vars.$jambonz};
+  --pink: #{vars.$pink};
+  --purple: #{vars.$purple};
+  --teal: #{vars.$teal};
+  --blue: #{vars.$blue};
+  --green: #{vars.$green};
+  --red: #{vars.$red};
+
+  --mix-amount: #{vars.$mix-amount};
+
+  --font-regular: #{vars.$font-regular};
+  --font-regular-italic: #{vars.$font-regular-italic};
+  --font-medium: #{vars.$font-medium};
+  --font-medium-italic: #{vars.$font-medium-italic};
+  --font-bold: #{vars.$font-bold};
+  --font-bold-italic: #{vars.$font-bold-italic};
+  --font-black: #{vars.$font-black};
+  --font-black-italic: #{vars.$font-black-italic};
+  --font-mono: #{vars.$font-mono};
+
+  --letter-space-1: #{vars.$letter-space-1};
+  --letter-space-2: #{vars.$letter-space-2};
+  --letter-space-3: #{vars.$letter-space-3};
+  --letter-space-4: #{vars.$letter-space-4};
+  --letter-space-5: #{vars.$letter-space-5};
+
+  --h1-size: #{vars.$h1-size};
+  --h2-size: #{vars.$h2-size};
+  --h3-size: #{vars.$h3-size};
+  --h4-size: #{vars.$h4-size};
+  --h5-size: #{vars.$h5-size};
+  --h6-size: #{vars.$h6-size};
+  --p-size: #{vars.$p-size};
+  --m-size: #{vars.$m-size};
+  --ms-size: #{vars.$ms-size};
+  --mxs-size: #{vars.$mxs-size};
+
+  --px00: #{vars.$px00};
+  --px01: #{vars.$px01};
+  --px02: #{vars.$px02};
+  --px03: #{vars.$px03};
+  --px04: #{vars.$px04};
+  --px05: #{vars.$px05};
+
+  --svg00: #{vars.$svg00};
+  --svg01: #{vars.$svg01};
+
+  --icon-size-1: #{vars.$icon-size-1};
+  --icon-size-2: #{vars.$icon-size-2};
+  --icon-size-3: #{vars.$icon-size-3};
+
+  --width-laptop: #{vars.$width-laptop};
+  --width-tablet-1: #{vars.$width-tablet-1};
+  --width-tablet-2: #{vars.$width-tablet-2};
+  --width-mobile: #{vars.$width-mobile};
+  --width-small: #{vars.$width-small};
+  --width-padding: #{vars.$width-padding};
+  --width-border: #{vars.$width-border};
+
+  --base-dur: #{vars.$base-dur};
+  --base-ease: #{vars.$base-ease};
+}

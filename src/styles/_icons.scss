@@ -108,12 +108,5 @@ svg {
   align-items: center;
   justify-content: center;
   grid-gap: vars.$px02;
-
-  @media (max-width: vars.$width-mobile) {
-    grid-gap: vars.$px01;
-  }
-
-  &--set {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }

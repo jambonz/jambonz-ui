@@ -94,7 +94,7 @@ export const KOPPage = () => {
       {/** Icons */}
       <div className="kop__icons">
         <div className="pad wrap">
-          <IconGroup set>
+          <IconGroup>
             {Object.keys(Icons).map((icon) => {
               const SvgIcon = Icons[icon];
               return (
@@ -106,7 +106,7 @@ export const KOPPage = () => {
           </IconGroup>
         </div>
         <div className="pad wrap">
-          <IconGroup set>
+          <IconGroup>
             <Icon subStyle="dark">
               <Icons.MapPin />
             </Icon>
@@ -122,7 +122,7 @@ export const KOPPage = () => {
           </IconGroup>
         </div>
         <div className="pad wrap">
-          <IconGroup set>
+          <IconGroup>
             <Icon mainStyle="hollow" subStyle="dark">
               <Icons.Heart />
             </Icon>
@@ -141,7 +141,7 @@ export const KOPPage = () => {
           </IconGroup>
         </div>
         <div className="bg--dark">
-          <IconGroup set className="pad wrap">
+          <IconGroup className="pad wrap">
             <Icon mainStyle="hollow" subStyle="white">
               <Icons.Heart />
             </Icon>

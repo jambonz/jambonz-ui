@@ -39,19 +39,12 @@ export function Icon({
 }
 
 /** Icon Groupings, uses <div /> with className */
-type IconGroupProps = DivProps & {
-  /** Applies sub class for styling, as in `icons--set` */
-  set?: boolean;
-};
-
 export function IconGroup({
-  set = false,
   children,
   className = ''
-}: IconGroupProps) {
+}: DivProps) {
   const classes: ClassNameMap = {
     'icos': true,
-    'icos--set': set,
   };
 
   if (className) {

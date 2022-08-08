@@ -1,4 +1,4 @@
-@use 'vars';
+@use "vars";
 
 svg {
   transition: stroke vars.$base-dur vars.$base-ease;

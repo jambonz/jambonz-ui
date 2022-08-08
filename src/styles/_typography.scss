@@ -1,5 +1,5 @@
-@use 'vars';
-@use 'mixins';
+@use "vars";
+@use "mixins";
 
 html,
 body {
@@ -27,7 +27,10 @@ em {
  * This className lets us inline a flat icon with text
  */
 .i {
-  em, svg, span, strong {
+  em,
+  svg,
+  span,
+  strong {
     display: inline;
     vertical-align: middle;
   }
@@ -39,7 +42,7 @@ em {
   svg:first-child {
     margin-right: vars.$px01;
   }
-  
+
   /*
    * Using React Feather
    * https://github.com/feathericons/react-feather
@@ -65,31 +68,38 @@ em {
   }
 }
 
-.h1, h1 {
+.h1,
+h1 {
   @include mixins.h1();
 }
 
-.h2, h2 {
+.h2,
+h2 {
   @include mixins.h2();
 }
 
-.h3, h3 {
+.h3,
+h3 {
   @include mixins.h3();
 }
 
-.h4, h4 {
+.h4,
+h4 {
   @include mixins.h4();
 }
 
-.h5, h5 {
+.h5,
+h5 {
   @include mixins.h5();
 }
 
-.h6, h6 {
+.h6,
+h6 {
   @include mixins.h6();
 }
 
-.p, p {
+.p,
+p {
   @include mixins.p();
 }
 
@@ -108,13 +118,20 @@ em {
 .m,
 .ms,
 .mxs,
-.p, p,
-.h1, h1,
-.h2, h2,
-.h3, h3,
-.h4, h4,
-.h5, h5,
-.h6, h6 {
+.p,
+p,
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
   span {
     color: vars.$jambonz;
   }

@@ -1,8 +1,8 @@
 /** Peer dep imports */
-import React from 'react';
+import React from "react";
 
 /** Type imports */
-import type { DivProps, HeadingProps, ParagraphProps } from './common';
+import type { DivProps, HeadingProps, ParagraphProps } from "./common";
 
 export function H1({ children, ...rest }: HeadingProps) {
   return <h1 {...rest}>{children}</h1>;
@@ -33,13 +33,25 @@ export function P({ children, ...rest }: ParagraphProps) {
 }
 
 export function M({ children, ...rest }: DivProps) {
-  return <div {...rest} className="m">{children}</div>;
+  return (
+    <div {...rest} className="m">
+      {children}
+    </div>
+  );
 }
 
 export function MS({ children, ...rest }: DivProps) {
-  return <div {...rest} className="ms">{children}</div>;
+  return (
+    <div {...rest} className="ms">
+      {children}
+    </div>
+  );
 }
 
 export function MXS({ children, ...rest }: DivProps) {
-  return <div {...rest} className="mxs">{children}</div>;
+  return (
+    <div {...rest} className="mxs">
+      {children}
+    </div>
+  );
 }

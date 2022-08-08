@@ -4,6 +4,6 @@ export interface ClassNameMap {
 
 export const classNames = (o: ClassNameMap): string => {
   return Object.keys(o)
-    .filter(k => (o[k] === true))
-    .join(' ');
+    .filter((k) => o[k] === true)
+    .join(" ");
 };

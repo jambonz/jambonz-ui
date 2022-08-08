@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# eslint, prettier...
+npx lint-staged
+
+# typescript...
+npm run check

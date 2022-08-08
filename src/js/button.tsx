@@ -1,12 +1,12 @@
 /** Peer dep imports */
-import React from 'react';
+import React from "react";
 
 /** Local imports */
-import { classNames } from './utils';
+import { classNames } from "./utils";
 
 /** Type imports */
-import type { ClassNameMap } from './utils';
-import type { mainStyles, subStyles, DivProps } from './common';
+import type { ClassNameMap } from "./utils";
+import type { mainStyles, subStyles, DivProps } from "./common";
 
 /** Buttons -- optionally polymorphic */
 /** General use case is to render HTML <button> */
@@ -24,7 +24,7 @@ interface CommonProps {
 }
 
 /** Button props, e.g. type="submit" | disabled etc... */
-type ButtonProps = CommonProps & JSX.IntrinsicElements['button'];
+type ButtonProps = CommonProps & JSX.IntrinsicElements["button"];
 
 /** Polymorphic -- pass `next/link` | `react-router-dom` Link */
 interface CommonLinkProps {
@@ -33,14 +33,18 @@ interface CommonLinkProps {
 }
 
 /** For <Link> from `next/link` */
-type NextLinkProps = CommonProps & CommonLinkProps & JSX.IntrinsicElements['a'] & {
-  href: string | {};
-};
+type NextLinkProps = CommonProps &
+  CommonLinkProps &
+  JSX.IntrinsicElements["a"] & {
+    href: string | Record<string, unknown>;
+  };
 
 /** For <Link> from `react-router-dom` */
-type RouterLinkProps = CommonProps & CommonLinkProps & Omit<JSX.IntrinsicElements['a'], 'href'> & {
-  to: string;
-};
+type RouterLinkProps = CommonProps &
+  CommonLinkProps &
+  Omit<JSX.IntrinsicElements["a"], "href"> & {
+    to: string;
+  };
 
 /** Overload so mixing and matching props causes TS error */
 /** <Button type="submit" disabled> -- works */
@@ -55,7 +59,7 @@ export function Button(props: RouterLinkProps): JSX.Element;
 export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
   const { small = false, subStyle, mainStyle, ...restProps } = props;
   const classes: ClassNameMap = {
-    'btn': true,
+    btn: true,
   };
 
   if (mainStyle) {
@@ -67,29 +71,33 @@ export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
   }
 
   if (small) {
-    classes['btn--small'] = true;
+    classes["btn--small"] = true;
   }
 
   /** For <Link> from `react-router-dom` */
-  if ('to' in restProps) {
-    const { as: Link, to, ...rest } = (restProps as RouterLinkProps);
+  if ("to" in restProps) {
+    const { as: Link, to, ...rest } = restProps as RouterLinkProps;
 
     return <Link {...rest} to={to} className={classNames(classes)} />;
   }
 
   /** For <Link> from `next/link` */
-  if ('href' in restProps) {
-    const { as: Link, href, ...rest } = (restProps as NextLinkProps);
+  if ("href" in restProps) {
+    const { as: Link, href, children, ...rest } = restProps as NextLinkProps;
 
     return (
       <Link href={href}>
-        <a {...rest} className={classNames(classes)} />
+        <a {...rest} className={classNames(classes)}>
+          {children}
+        </a>
       </Link>
     );
   }
 
   /** Just a <button> ... */
-  return <button {...restProps as ButtonProps} className={classNames(classes)} />;
+  return (
+    <button {...(restProps as ButtonProps)} className={classNames(classes)} />
+  );
 }
 
 /** Button Groupings, uses <div /> with className */
@@ -98,26 +106,27 @@ type GroupProps = DivProps & {
   left?: boolean;
   /** Applies flex position */
   right?: boolean;
-}
+};
 
-export function ButtonGroup({ left = false, right = false, children, className = '' }: GroupProps) {
+export function ButtonGroup({
+  left = false,
+  right = false,
+  children,
+  className = "",
+}: GroupProps) {
   const classes: ClassNameMap = {
-    'btns': true,
+    btns: true,
   };
 
   if (left) {
-    classes['btns--left'] = true;
+    classes["btns--left"] = true;
   } else if (right) {
-    classes['btns--right'] = true;
+    classes["btns--right"] = true;
   }
 
   if (className) {
-    className.split(' ').forEach(c => classes[c] = true);
+    className.split(" ").forEach((c) => (classes[c] = true));
   }
 
-  return (
-    <div className={classNames(classes)}>
-      {children}
-    </div>
-  );
+  return <div className={classNames(classes)}>{children}</div>;
 }

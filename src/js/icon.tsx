@@ -1,12 +1,12 @@
 /** Peer dep imports */
-import React from 'react';
+import React from "react";
 
 /** Local imports */
-import { classNames } from './utils';
+import { classNames } from "./utils";
 
 /** Type imports */
-import type { ClassNameMap } from './utils';
-import type { mainStyles, subStyles, DivProps } from './common';
+import type { ClassNameMap } from "./utils";
+import type { mainStyles, subStyles, DivProps } from "./common";
 
 /** Icons, uses <div /> with className */
 type IconProps = DivProps & {
@@ -16,13 +16,9 @@ type IconProps = DivProps & {
   mainStyle?: mainStyles;
 };
 
-export function Icon({
-  subStyle,
-  mainStyle,
-  ...rest
-}: IconProps) {
+export function Icon({ subStyle, mainStyle, ...rest }: IconProps) {
   const classes: ClassNameMap = {
-    'ico': true,
+    ico: true,
   };
 
   if (mainStyle) {
@@ -33,27 +29,18 @@ export function Icon({
     classes[`ico--${subStyle}`] = true;
   }
 
-  return (
-    <div {...rest} className={classNames(classes)} />
-  );
+  return <div {...rest} className={classNames(classes)} />;
 }
 
 /** Icon Groupings, uses <div /> with className */
-export function IconGroup({
-  children,
-  className = ''
-}: DivProps) {
+export function IconGroup({ children, className = "" }: DivProps) {
   const classes: ClassNameMap = {
-    'icos': true,
+    icos: true,
   };
 
   if (className) {
-    className.split(' ').forEach(c => classes[c] = true);
+    className.split(" ").forEach((c) => (classes[c] = true));
   }
 
-  return (
-    <div className={classNames(classes)}>
-      {children}
-    </div>
-  );
+  return <div className={classNames(classes)}>{children}</div>;
 }

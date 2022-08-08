@@ -1,4 +1,4 @@
-@use 'vars';
+@use "vars";
 
 @mixin font-bold() {
   font-family: vars.$font-bold;
@@ -74,7 +74,7 @@
   }
 }
 
-@mixin h4 () {
+@mixin h4() {
   font-size: vars.$h4-size;
   line-height: 1.5;
   letter-spacing: vars.$letter-space-3;
@@ -145,7 +145,7 @@
   }
 }
 
-@mixin ms () {
+@mixin ms() {
   font-size: vars.$ms-size;
   line-height: 2;
 }

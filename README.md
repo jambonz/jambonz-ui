@@ -46,6 +46,18 @@ for frontend stacks.
 npm i jambonz-ui # or yarn add jambonz-ui
 ```
 
+## Storybook
+
+You can run and build storybook with the following:
+
+```shell
+# run local storybook
+npm run storybook
+
+# build local storybook
+npm run build-storybook
+```
+
 ## Publishing
 
 Always follow these steps to publish this package:

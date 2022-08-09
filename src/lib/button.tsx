@@ -13,6 +13,16 @@ import type { mainStyles, subStyles, DivProps } from "./common";
 /** The as: Link use case is to render HTML <a> via `next/link` | `react-router-dom` */
 /** Strats: https://react-typescript-cheatsheet.netlify.app/docs/advanced/patterns_by_usecase/ */
 
+/** Overloaded so mixing and matching props causes TS error */
+/** <Button type="submit" disabled> -- works */
+/** <Button href="/foo" as={Link}>  -- works */
+/** <Button to="/bar" as={Link}>    -- works */
+/** <Button disabled to="/baz">     -- error, mixing button and router link */
+/** <Button disabled href="/baz">   -- error, mixing button and next link */
+/** <Button href="/baz">            -- error, missing `as` prop */
+
+/** Note: storybook can't parse the button props so `disabled` etc don't work with args... */
+
 /** Common props for all versions */
 interface CommonProps {
   /** For obvious reasons */
@@ -23,36 +33,33 @@ interface CommonProps {
   mainStyle?: mainStyles;
 }
 
-/** Button props, e.g. type="submit" | disabled etc... */
-type ButtonProps = CommonProps & JSX.IntrinsicElements["button"];
-
 /** Polymorphic -- pass `next/link` | `react-router-dom` Link */
 interface CommonLinkProps {
   /** Provide the <Link> component */
   as: React.ElementType;
 }
 
+/** Button props, e.g. type="submit" | disabled etc... */
+export type ButtonProps = CommonProps & JSX.IntrinsicElements["button"];
+
 /** For <Link> from `next/link` */
-type NextLinkProps = CommonProps &
+export type NextLinkProps = CommonProps &
   CommonLinkProps &
   JSX.IntrinsicElements["a"] & {
     href: string | Record<string, unknown>;
   };
 
 /** For <Link> from `react-router-dom` */
-type RouterLinkProps = CommonProps &
+export type RouterLinkProps = CommonProps &
   CommonLinkProps &
   Omit<JSX.IntrinsicElements["a"], "href"> & {
     to: string;
   };
 
-/** Overload so mixing and matching props causes TS error */
-/** <Button type="submit" disabled> -- works */
-/** <Button href="/foo" as={Link}>  -- works */
-/** <Button to="/bar" as={Link}>    -- works */
-/** <Button disabled to="/baz">     -- error, mixing button and router link */
-/** <Button disabled href="/baz">   -- error, mixing button and next link */
-/** <Button href="/baz">            -- error, missing `as` prop */
+/**
+ * Global UI button style. Button can be polymorphic and
+ * render a `next/link` or `react-router-dom` Link.
+ */
 export function Button(props: ButtonProps): JSX.Element;
 export function Button(props: NextLinkProps): JSX.Element;
 export function Button(props: RouterLinkProps): JSX.Element;
@@ -101,19 +108,22 @@ export function Button(props: ButtonProps | NextLinkProps | RouterLinkProps) {
 }
 
 /** Button Groupings, uses <div /> with className */
-type GroupProps = DivProps & {
+export type ButtonGroupProps = DivProps & {
   /** Applies flex position */
   left?: boolean;
   /** Applies flex position */
   right?: boolean;
 };
 
+/**
+ * Container to group multiple UI buttons with alignment and responsive layout.
+ */
 export function ButtonGroup({
   left = false,
   right = false,
   children,
   className = "",
-}: GroupProps) {
+}: ButtonGroupProps) {
   const classes: ClassNameMap = {
     btns: true,
   };

@@ -53,6 +53,14 @@ svg {
     }
   }
 
+  &--grey {
+    background-color: vars.$grey;
+
+    svg {
+      stroke: vars.$white;
+    }
+  }
+
   &--hollow {
     background-color: transparent;
     border: vars.$width-border solid vars.$jambonz;
@@ -98,6 +106,14 @@ svg {
 
       svg {
         stroke: vars.$white;
+      }
+    }
+
+    &.ico--grey {
+      border-color: vars.$grey;
+
+      svg {
+        stroke: vars.$grey;
       }
     }
   }

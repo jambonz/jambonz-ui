@@ -9,13 +9,16 @@ import type { ClassNameMap } from "./utils";
 import type { mainStyles, subStyles, DivProps } from "./common";
 
 /** Icons, uses <div /> with className */
-type IconProps = DivProps & {
+export type IconProps = DivProps & {
   /** See type subStyles */
   subStyle?: subStyles;
   /** See type mainStyles */
   mainStyle?: mainStyles;
 };
 
+/**
+ * GLobal UI icon style that wraps `react-feather` SVGs.
+ */
 export function Icon({ subStyle, mainStyle, ...rest }: IconProps) {
   const classes: ClassNameMap = {
     ico: true,
@@ -32,7 +35,9 @@ export function Icon({ subStyle, mainStyle, ...rest }: IconProps) {
   return <div {...rest} className={classNames(classes)} />;
 }
 
-/** Icon Groupings, uses <div /> with className */
+/**
+ * Container to group multiple UI icons with responsive layout.
+ */
 export function IconGroup({ children, className = "" }: DivProps) {
   const classes: ClassNameMap = {
     icos: true,

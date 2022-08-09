@@ -1,32 +1,56 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta } from "@storybook/react";
+import { Heart } from "react-feather";
+import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Button } from "../lib/index";
-import { GitHub } from "react-feather";
+import { Button } from "../lib";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+import type { ButtonProps, RouterLinkProps } from "../lib/button";
+
 export default {
   title: "Jambonz UI/Button",
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const Default = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Default.args = {
-  children: "Default button",
+export const Standard = ({ children, ...args }: ButtonProps) => {
+  return <Button {...args}>{children}</Button>;
 };
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
+Standard.args = {
+  mainStyle: "primary",
+  disabled: false,
+  children: "Standard button",
+} as ButtonProps;
+
+export const InlineIcon = ({ children, ...args }: ButtonProps) => {
+  return <Button {...args}>{children}</Button>;
+};
+
+InlineIcon.args = {
   mainStyle: "hollow",
+  disabled: false,
   children: (
     <>
-      <GitHub />
-      <span>With inline icon</span>
+      <Heart />
+      <span>Button with inline icon</span>
     </>
   ),
+} as ButtonProps;
+
+export const AsLink = ({ children, ...args }: RouterLinkProps) => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<Button {...args}>{children}</Button>} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
+
+AsLink.args = {
+  mainStyle: "primary",
+  disabled: false,
+  children: "Button as react router link",
+  as: Link,
+  to: "/",
+} as RouterLinkProps;

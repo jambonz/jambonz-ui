@@ -17,7 +17,7 @@ export type IconProps = DivProps & {
 };
 
 /**
- * GLobal UI icon style that wraps `react-feather` SVGs.
+ * Global UI icon style that wraps `react-feather` SVGs.
  */
 export function Icon({ subStyle, mainStyle, ...rest }: IconProps) {
   const classes: ClassNameMap = {

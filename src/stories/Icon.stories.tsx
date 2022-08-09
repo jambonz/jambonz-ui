@@ -2,20 +2,20 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { Heart } from "react-feather";
 
-import { Icon } from "../lib";
+import { Icon as IconComponent } from "../lib";
 
 import type { IconProps } from "../lib/icon";
 
 export default {
-  title: "Jambonz UI/Icon",
-  component: Icon,
-} as ComponentMeta<typeof Icon>;
+  title: "Jambonz UI/Icons/Icon",
+  component: IconComponent,
+} as ComponentMeta<typeof IconComponent>;
 
-export const Standard = ({ children, ...args }: IconProps) => {
-  return <Icon {...args}>{children}</Icon>;
+export const Icon = ({ children, ...args }: IconProps) => {
+  return <IconComponent {...args}>{children}</IconComponent>;
 };
 
-Standard.args = {
+Icon.args = {
   mainStyle: "primary",
   children: <Heart />,
 } as IconProps;

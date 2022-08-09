@@ -2,17 +2,17 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { Heart } from "react-feather";
 
-import { Icon, IconGroup } from "../lib";
+import { Icon, IconGroup as IconGroupComponent } from "../lib";
 
 export default {
-  title: "Jambonz UI/IconGroup",
-  component: IconGroup,
+  title: "Jambonz UI/Icons/IconGroup",
+  component: IconGroupComponent,
   subcomponents: { Icon },
-} as ComponentMeta<typeof IconGroup>;
+} as ComponentMeta<typeof IconGroupComponent>;
 
-export const Index = () => {
+export const IconGroup = () => {
   return (
-    <IconGroup>
+    <IconGroupComponent>
       <Icon>
         <Heart />
       </Icon>
@@ -31,6 +31,6 @@ export const Index = () => {
       <Icon subStyle="grey">
         <Heart />
       </Icon>
-    </IconGroup>
+    </IconGroupComponent>
   );
 };

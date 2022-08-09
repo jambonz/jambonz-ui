@@ -8,25 +8,25 @@ import { Button } from "../lib";
 import type { ButtonProps, RouterLinkProps } from "../lib/button";
 
 export default {
-  title: "Jambonz UI/Button",
+  title: "Jambonz UI/Buttons/Button",
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-export const Standard = ({ children, ...args }: ButtonProps) => {
+export const Base = ({ children, ...args }: ButtonProps) => {
   return <Button {...args}>{children}</Button>;
 };
 
-Standard.args = {
+Base.args = {
   mainStyle: "primary",
   disabled: false,
-  children: "Standard button",
+  children: "Base button",
 } as ButtonProps;
 
-export const InlineIcon = ({ children, ...args }: ButtonProps) => {
+export const WithInlineIcon = ({ children, ...args }: ButtonProps) => {
   return <Button {...args}>{children}</Button>;
 };
 
-InlineIcon.args = {
+WithInlineIcon.args = {
   mainStyle: "hollow",
   disabled: false,
   children: (
@@ -37,7 +37,7 @@ InlineIcon.args = {
   ),
 } as ButtonProps;
 
-export const AsLink = ({ children, ...args }: RouterLinkProps) => {
+export const AsRouterLink = ({ children, ...args }: RouterLinkProps) => {
   return (
     <BrowserRouter>
       <Routes>
@@ -47,7 +47,7 @@ export const AsLink = ({ children, ...args }: RouterLinkProps) => {
   );
 };
 
-AsLink.args = {
+AsRouterLink.args = {
   mainStyle: "primary",
   disabled: false,
   children: "Button as react router link",

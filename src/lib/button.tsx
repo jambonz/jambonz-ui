@@ -57,8 +57,8 @@ export type RouterLinkProps = CommonProps &
   };
 
 /**
- * Global UI button. Button can optionally be polymorphic
- * and render a `next/link` or `react-router-dom` Link.
+ * Global UI button style. Button can be polymorphic and
+ * render a `next/link` or `react-router-dom` Link.
  */
 export function Button(props: ButtonProps): JSX.Element;
 export function Button(props: NextLinkProps): JSX.Element;

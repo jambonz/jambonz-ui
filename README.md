@@ -46,6 +46,12 @@ for frontend stacks.
 npm i jambonz-ui # or yarn add jambonz-ui
 ```
 
+## Developing
+
+Clone this repo and run `npm i` to install packages.
+
+Before you begin pushing code also run `npx husky install` for `pre-commit` hooks.
+
 ## Storybook
 
 You can run and build storybook with the following.

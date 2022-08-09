@@ -7,7 +7,6 @@
   "typings": "dist/defs/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "prepare": "husky install",
     "prebuild": "rm -rf build && rm -rf dist",
     "build": "npm run build:esm && npm run build:cjs && npm run build:defs && npm run build:styles",
     "postbuild": "npm run package && npm run build:rollup",

@@ -48,7 +48,9 @@ npm i jambonz-ui # or yarn add jambonz-ui
 
 ## Storybook
 
-You can run and build storybook with the following:
+You can run and build storybook with the following.
+
+You can view the storybook static site [here](https://jambonz-ui.vercel.app/).
 
 ```shell
 # run local storybook

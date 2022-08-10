@@ -6,3 +6,4 @@ npx lint-staged
 
 # typescript...
 npm run check
+npm run check:stories

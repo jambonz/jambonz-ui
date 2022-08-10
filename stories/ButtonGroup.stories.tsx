@@ -1,9 +1,9 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 
-import { Button, ButtonGroup as ButtonGroupComponent } from "../lib";
+import { Button, ButtonGroup as ButtonGroupComponent } from "../src/lib";
 
-import type { ButtonGroupProps } from "src/lib/button";
+import type { ButtonGroupProps } from "../src/lib/button";
 
 export default {
   title: "Jambonz UI/Buttons/ButtonGroup",

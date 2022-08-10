@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 
-import { P } from "../lib";
+import { P } from "../src/lib";
 
 export default {
   title: "Jambonz UI/Typography/Paragraph",

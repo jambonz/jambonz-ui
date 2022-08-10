@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { Heart } from "react-feather";
 
-import { Icon, IconGroup as IconGroupComponent } from "../lib";
+import { Icon, IconGroup as IconGroupComponent } from "../src/lib";
 
 export default {
   title: "Jambonz UI/Icons/IconGroup",

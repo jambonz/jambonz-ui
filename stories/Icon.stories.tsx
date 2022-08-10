@@ -2,9 +2,9 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { Heart } from "react-feather";
 
-import { Icon as IconComponent } from "../lib";
+import { Icon as IconComponent } from "../src/lib";
 
-import type { IconProps } from "../lib/icon";
+import type { IconProps } from "../src/lib/icon";
 
 export default {
   title: "Jambonz UI/Icons/Icon",

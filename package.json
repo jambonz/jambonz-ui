@@ -22,6 +22,7 @@
     "lint": "eslint . --ext js,ts,tsx --max-warnings=0",
     "format": "prettier --check .",
     "check": "tsc --noEmit true",
+    "check:stories": "find stories -type f -name \"*.tsx\" | xargs tsc --noEmit true --jsx react-jsx --module esnext --moduleResolution node --allowSyntheticDefaultImports true",
     "prestorybook": "npm run build",
     "storybook": "start-storybook -p 6006",
     "prebuild-storybook": "npm run build",

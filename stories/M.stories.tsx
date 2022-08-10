@@ -1,20 +1,20 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 
-import { H4 } from "../lib";
+import { M } from "../src/lib";
 
 export default {
-  title: "Jambonz UI/Typography/Heading4",
-  component: H4,
-} as ComponentMeta<typeof H4>;
+  title: "Jambonz UI/Typography/Meta",
+  component: M,
+} as ComponentMeta<typeof M>;
 
-export const Heading4 = () => {
+export const Meta = () => {
   return (
     <div className="wrap">
-      <H4>
+      <M>
         <span>jambonz</span> is the communications platform that brings your
         ideas to life. So you can bring your best to your customers every day.
-      </H4>
+      </M>
     </div>
   );
 };

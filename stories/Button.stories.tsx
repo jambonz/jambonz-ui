@@ -3,9 +3,9 @@ import { ComponentMeta } from "@storybook/react";
 import { Heart } from "react-feather";
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Button } from "../lib";
+import { Button } from "../src/lib";
 
-import type { ButtonProps, RouterLinkProps } from "../lib/button";
+import type { ButtonProps, RouterLinkProps } from "../src/lib/button";
 
 export default {
   title: "Jambonz UI/Buttons/Button",

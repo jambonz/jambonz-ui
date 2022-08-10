@@ -27,7 +27,8 @@ jobs:
 
       - name: Run checks
         run: |
-          npm run format
           npm run lint
+          npm run format
           npm run check
+          npm run check:stories
           npm run build

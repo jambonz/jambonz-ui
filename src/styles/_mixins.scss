@@ -1,156 +1,156 @@
 @use "vars";
 
 @mixin font-bold() {
-  font-family: vars.$font-bold;
+  font-family: var(--font-bold);
   font-weight: normal;
 
   em {
-    font-family: vars.$font-bold-italic;
+    font-family: var(--font-bold-italic);
   }
 }
 
 @mixin font-medium() {
-  font-family: vars.$font-medium;
+  font-family: var(--font-medium);
 
   em {
-    font-family: vars.$font-medium-italic;
+    font-family: var(--font-medium-italic);
   }
 }
 
 @mixin h1() {
-  font-size: vars.$h1-size;
+  font-size: var(--h1-size);
   line-height: 1.33;
-  letter-spacing: vars.$letter-space-5;
+  letter-spacing: var(--letter-space-5);
   @include font-bold();
 
   @media (max-width: vars.$width-tablet-1) {
-    font-size: vars.$h2-size;
+    font-size: var(--h2-size);
   }
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$h3-size;
+    font-size: var(--h3-size);
   }
 
   @media (max-width: vars.$width-mobile) {
-    font-size: vars.$h4-size;
+    font-size: var(--h4-size);
   }
 }
 
 @mixin h2() {
-  font-size: vars.$h2-size;
+  font-size: var(--h2-size);
   line-height: 1.35;
-  letter-spacing: vars.$letter-space-5;
+  letter-spacing: var(--letter-space-5);
   @include font-bold();
 
   @media (max-width: vars.$width-tablet-1) {
-    font-size: vars.$h3-size;
+    font-size: var(--h3-size);
   }
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$h4-size;
+    font-size: var(--h4-size);
   }
 
   @media (max-width: vars.$width-mobile) {
-    font-size: vars.$h5-size;
+    font-size: var(--h5-size);
   }
 }
 
 @mixin h3() {
-  font-size: vars.$h3-size;
+  font-size: var(--h3-size);
   line-height: 1.33;
-  letter-spacing: vars.$letter-space-4;
+  letter-spacing: var(--letter-space-4);
   @include font-bold();
 
   @media (max-width: vars.$width-tablet-1) {
-    font-size: vars.$h4-size;
+    font-size: var(--h4-size);
   }
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$h5-size;
+    font-size: var(--h5-size);
   }
 
   @media (max-width: vars.$width-mobile) {
-    font-size: vars.$h6-size;
+    font-size: var(--h6-size);
   }
 }
 
 @mixin h4() {
-  font-size: vars.$h4-size;
+  font-size: var(--h4-size);
   line-height: 1.5;
-  letter-spacing: vars.$letter-space-3;
+  letter-spacing: var(--letter-space-3);
   @include font-medium();
 
   @media (max-width: vars.$width-tablet-1) {
-    font-size: vars.$h5-size;
+    font-size: var(--h5-size);
   }
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$h6-size;
+    font-size: var(--h6-size);
   }
 
   @media (max-width: vars.$width-mobile) {
-    font-size: vars.$p-size;
+    font-size: var(--p-size);
   }
 }
 
 @mixin h5() {
-  font-size: vars.$h5-size;
+  font-size: var(--h5-size);
   line-height: 1.67;
-  letter-spacing: vars.$letter-space-2;
+  letter-spacing: var(--letter-space-2);
   @include font-medium();
 
   @media (max-width: vars.$width-tablet-1) {
-    font-size: vars.$h6-size;
+    font-size: var(--h6-size);
   }
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$p-size;
+    font-size: var(--p-size);
   }
 }
 
 @mixin h6() {
-  font-size: vars.$h6-size;
+  font-size: var(--h6-size);
   line-height: 1.8;
-  letter-spacing: vars.$letter-space-2;
+  letter-spacing: var(--letter-space-2);
   @include font-medium();
 
   @media (max-width: vars.$width-tablet-1) {
-    font-size: vars.$p-size;
+    font-size: var(--p-size);
   }
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$m-size;
+    font-size: var(--m-size);
   }
 }
 
 @mixin p() {
-  font-size: vars.$p-size;
+  font-size: var(--p-size);
   line-height: 1.9;
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$m-size;
+    font-size: var(--m-size);
   }
 
   @media (max-width: vars.$width-mobile) {
-    font-size: vars.$ms-size;
+    font-size: var(--ms-size);
   }
 }
 
 @mixin m() {
-  font-size: vars.$m-size;
+  font-size: var(--m-size);
   line-height: 1.9;
 
   @media (max-width: vars.$width-tablet-1) {
-    font-size: vars.$ms-size;
+    font-size: var(--ms-size);
   }
 }
 
 @mixin ms() {
-  font-size: vars.$ms-size;
+  font-size: var(--ms-size);
   line-height: 2;
 }
 
 @mixin mxs() {
-  font-size: vars.$mxs-size;
+  font-size: var(--mxs-size);
   line-height: 2;
 }

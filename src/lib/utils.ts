@@ -1,3 +1,5 @@
+let rootStyle: CSSStyleDeclaration;
+
 export interface ClassNameMap {
   [key: string]: boolean;
 }
@@ -9,6 +11,9 @@ export const classNames = (obj: ClassNameMap) => {
 };
 
 export const getCssVar = (prop: string) => {
-  const style = window.getComputedStyle(document.documentElement);
-  return style.getPropertyValue(prop);
+  if (!rootStyle) {
+    rootStyle = window.getComputedStyle(document.documentElement);
+  }
+
+  return rootStyle.getPropertyValue(prop);
 };

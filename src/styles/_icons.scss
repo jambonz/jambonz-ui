@@ -1,25 +1,25 @@
 @use "vars";
 
 svg {
-  transition: stroke vars.$base-dur vars.$base-ease;
+  transition: stroke var(--base-dur) var(--base-ease);
 }
 
 .ico {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: vars.$jambonz;
-  width: vars.$icon-size-1;
-  height: vars.$icon-size-1;
+  background-color: var(--jambonz);
+  width: var(--icon-size-1);
+  height: var(--icon-size-1);
   border-radius: 100%;
 
   @media (max-width: vars.$width-mobile) {
-    width: vars.$icon-size-2;
-    height: vars.$icon-size-2;
+    width: var(--icon-size-2);
+    height: var(--icon-size-2);
   }
 
   svg {
-    stroke: vars.$white;
+    stroke: var(--white);
     width: 22px;
     height: 22px;
 
@@ -30,90 +30,90 @@ svg {
   }
 
   &--dark {
-    background-color: vars.$dark;
+    background-color: var(--dark);
   }
 
   &--blue {
-    background-color: vars.$blue;
+    background-color: var(--blue);
   }
 
   &--teal {
-    background-color: vars.$teal;
+    background-color: var(--teal);
   }
 
   &--purple {
-    background-color: vars.$purple;
+    background-color: var(--purple);
   }
 
   &--white {
-    background-color: vars.$white;
+    background-color: var(--white);
 
     svg {
-      stroke: vars.$dark;
+      stroke: var(--dark);
     }
   }
 
   &--grey {
-    background-color: vars.$grey;
+    background-color: var(--grey);
 
     svg {
-      stroke: vars.$white;
+      stroke: var(--white);
     }
   }
 
   &--hollow {
     background-color: transparent;
-    border: vars.$width-border solid vars.$jambonz;
+    border: var(--width-border) solid var(--jambonz);
 
     svg {
-      stroke: vars.$jambonz;
+      stroke: var(--jambonz);
     }
 
     &.ico--dark {
-      border-color: vars.$dark;
+      border-color: var(--dark);
 
       svg {
-        stroke: vars.$dark;
+        stroke: var(--dark);
       }
     }
 
     &.ico--blue {
-      border-color: vars.$blue;
+      border-color: var(--blue);
 
       svg {
-        stroke: vars.$blue;
+        stroke: var(--blue);
       }
     }
 
     &.ico--teal {
-      border-color: vars.$teal;
+      border-color: var(--teal);
 
       svg {
-        stroke: vars.$teal;
+        stroke: var(--teal);
       }
     }
 
     &.ico--purple {
-      border-color: vars.$purple;
+      border-color: var(--purple);
 
       svg {
-        stroke: vars.$purple;
+        stroke: var(--purple);
       }
     }
 
     &.ico--white {
-      border-color: vars.$white;
+      border-color: var(--white);
 
       svg {
-        stroke: vars.$white;
+        stroke: var(--white);
       }
     }
 
     &.ico--grey {
-      border-color: vars.$grey;
+      border-color: var(--grey);
 
       svg {
-        stroke: vars.$grey;
+        stroke: var(--grey);
       }
     }
   }
@@ -123,6 +123,6 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-gap: vars.$px02;
+  grid-gap: var(--px02);
   flex-wrap: wrap;
 }

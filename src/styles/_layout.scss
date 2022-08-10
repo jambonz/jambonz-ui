@@ -2,17 +2,17 @@
 
 .wrap {
   width: 100%;
-  padding-left: vars.$width-padding;
-  padding-right: vars.$width-padding;
+  padding-left: var(--width-padding);
+  padding-right: var(--width-padding);
 }
 
 .pad {
-  padding-top: vars.$px05;
-  padding-bottom: vars.$px05;
+  padding-top: var(--px05);
+  padding-bottom: var(--px05);
 
   @media (max-width: vars.$width-tablet-1) {
-    padding-top: vars.$px04;
-    padding-bottom: vars.$px04;
+    padding-top: var(--px04);
+    padding-bottom: var(--px04);
   }
 
   img {
@@ -21,17 +21,17 @@
 }
 
 .pad-b {
-  padding-bottom: vars.$px05;
+  padding-bottom: var(--px05);
 
   @media (max-width: vars.$width-tablet-1) {
-    padding-bottom: vars.$px04;
+    padding-bottom: var(--px04);
   }
 }
 
 .pad-t {
-  padding-top: vars.$px05;
+  padding-top: var(--px05);
 
   @media (max-width: vars.$width-tablet-1) {
-    padding-top: vars.$px04;
+    padding-top: var(--px04);
   }
 }

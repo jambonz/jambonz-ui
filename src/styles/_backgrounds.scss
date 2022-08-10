@@ -1,36 +1,36 @@
 @use "vars";
 
 .bg--jam {
-  background-color: vars.$jambonz;
-  color: vars.$white;
+  background-color: var(--jambonz);
+  color: var(--white);
 }
 
 .bg--black {
-  background-color: vars.$black;
-  color: vars.$white;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .bg--dark {
-  background-color: vars.$dark;
-  color: vars.$white;
+  background-color: var(--dark);
+  color: var(--white);
 }
 
 .bg--grey {
-  background-color: vars.$grey-light;
+  background-color: var(--grey-light);
 }
 
 .bg--pink {
-  background-color: vars.$pink;
+  background-color: var(--pink);
 }
 
 .bg--blue {
-  background-color: vars.$blue;
+  background-color: var(--blue);
 }
 
 .bg--purple {
-  background-color: vars.$purple;
+  background-color: var(--purple);
 }
 
 .bg--teal {
-  background-color: vars.$teal;
+  background-color: var(--teal);
 }

@@ -3,15 +3,15 @@
 
 html,
 body {
-  font-family: vars.$font-regular;
-  letter-spacing: vars.$letter-space-1;
-  color: vars.$dark;
+  font-family: var(--font-regular);
+  letter-spacing: var(--letter-space-1);
+  color: var(--dark);
 }
 
 a {
-  color: vars.$jambonz;
+  color: var(--jambonz);
   text-decoration: none;
-  transition: color vars.$base-dur vars.$base-ease;
+  transition: color var(--base-dur) var(--base-ease);
 }
 
 strong {
@@ -19,7 +19,7 @@ strong {
 }
 
 em {
-  font-family: vars.$font-regular-italic;
+  font-family: var(--font-regular-italic);
 }
 
 /*
@@ -36,11 +36,11 @@ em {
   }
 
   svg:last-child {
-    margin-left: vars.$px01;
+    margin-left: var(--px01);
   }
 
   svg:first-child {
-    margin-right: vars.$px01;
+    margin-right: var(--px01);
   }
 
   /*
@@ -57,13 +57,13 @@ em {
    */
   svg {
     @media (max-width: vars.$width-tablet-1) {
-      width: vars.$svg01;
-      height: vars.$svg01;
+      width: var(--svg01);
+      height: var(--svg01);
     }
 
     @media (max-width: vars.$width-tablet-2) {
-      width: vars.$svg00;
-      height: vars.$svg00;
+      width: var(--svg00);
+      height: var(--svg00);
     }
   }
 }
@@ -133,7 +133,7 @@ h5,
 .h6,
 h6 {
   span {
-    color: vars.$jambonz;
+    color: var(--jambonz);
   }
 }
 
@@ -142,33 +142,33 @@ h6 {
 }
 
 .txt--jam {
-  color: vars.$jambonz;
+  color: var(--jambonz);
 }
 
 .txt--teal {
-  color: vars.$teal;
+  color: var(--teal);
 }
 
 .txt--blue {
-  color: vars.$blue;
+  color: var(--blue);
 }
 
 .txt--purple {
-  color: vars.$purple;
+  color: var(--purple);
 }
 
 .txt--white {
-  color: vars.$white;
+  color: var(--white);
 }
 
 .txt--red {
-  color: vars.$red;
+  color: var(--red);
 }
 
 .txt--green {
-  color: vars.$green;
+  color: var(--green);
 }
 
 .txt--grey {
-  color: vars.$grey;
+  color: var(--grey);
 }

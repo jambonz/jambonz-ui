@@ -4,19 +4,19 @@
 .btn {
   @include mixins.font-bold();
   white-space: nowrap;
-  font-size: vars.$m-size;
+  font-size: var(--m-size);
   line-height: 1;
-  padding: 23px vars.$px04 21px;
-  background-color: vars.$jambonz;
-  color: vars.$white;
+  padding: 23px var(--px04) 21px;
+  background-color: var(--jambonz);
+  color: var(--white);
   border: none;
   cursor: pointer;
   text-decoration: none;
   border-radius: 30px;
   display: inline-block;
-  transition: background-color vars.$base-dur vars.$base-ease,
-    border-color vars.$base-dur vars.$base-ease,
-    color vars.$base-dur vars.$base-ease;
+  transition: background-color var(--base-dur) var(--base-ease),
+    border-color var(--base-dur) var(--base-ease),
+    color var(--base-dur) var(--base-ease);
 
   svg,
   span {
@@ -25,11 +25,11 @@
   }
 
   svg:last-child {
-    margin-left: vars.$px02;
+    margin-left: var(--px02);
   }
 
   svg:first-child {
-    margin-right: vars.$px02;
+    margin-right: var(--px02);
   }
 
   svg {
@@ -38,8 +38,8 @@
 
     @media (max-width: vars.$width-tablet-2) {
       margin-right: 12px;
-      width: vars.$px02;
-      height: vars.$px02;
+      width: var(--px02);
+      height: var(--px02);
     }
 
     @media (max-width: vars.$width-mobile) {
@@ -54,11 +54,11 @@
   }
 
   @media (max-width: vars.$width-tablet-2) {
-    font-size: vars.$ms-size;
+    font-size: var(--ms-size);
   }
 
   &--dark {
-    background-color: vars.$dark;
+    background-color: var(--dark);
 
     &:hover {
       background-color: mix(vars.$white, vars.$dark, vars.$mix-amount);
@@ -66,7 +66,7 @@
   }
 
   &--blue {
-    background-color: vars.$blue;
+    background-color: var(--blue);
 
     &:hover {
       background-color: mix(vars.$white, vars.$blue, vars.$mix-amount);
@@ -74,7 +74,7 @@
   }
 
   &--teal {
-    background-color: vars.$teal;
+    background-color: var(--teal);
 
     &:hover {
       background-color: mix(vars.$white, vars.$teal, vars.$mix-amount);
@@ -82,7 +82,7 @@
   }
 
   &--purple {
-    background-color: vars.$purple;
+    background-color: var(--purple);
 
     &:hover {
       background-color: mix(vars.$white, vars.$purple, vars.$mix-amount);
@@ -90,8 +90,8 @@
   }
 
   &--white {
-    background-color: vars.$white;
-    color: vars.$jambonz;
+    background-color: var(--white);
+    color: var(--jambonz);
 
     &:hover {
       background-color: mix(vars.$grey, vars.$white, vars.$mix-amount);
@@ -99,8 +99,8 @@
   }
 
   &--grey {
-    background-color: vars.$grey;
-    color: vars.$white;
+    background-color: var(--grey);
+    color: var(--white);
 
     &:hover {
       background-color: mix(vars.$white, vars.$grey, vars.$mix-amount);
@@ -108,168 +108,168 @@
   }
 
   &[disabled] {
-    background-color: vars.$grey;
+    background-color: var(--grey);
     cursor: not-allowed;
-    color: vars.$white;
+    color: var(--white);
 
     &:hover {
-      background-color: vars.$grey;
+      background-color: var(--grey);
     }
   }
 
   &--hollow {
-    font-family: vars.$font-regular;
+    font-family: var(--font-regular);
     background-color: transparent;
-    border: vars.$width-border solid vars.$jambonz;
-    color: vars.$jambonz;
-    padding: 18px vars.$px03 17px;
+    border: var(--width-border) solid var(--jambonz);
+    color: var(--jambonz);
+    padding: 18px var(--px03) 17px;
 
     &:hover {
-      background-color: vars.$jambonz;
-      color: vars.$white;
+      background-color: var(--jambonz);
+      color: var(--white);
     }
 
     @media (max-width: vars.$width-mobile) {
-      padding: 15px vars.$px03 vars.$px02;
+      padding: 15px var(--px03) var(--px02);
     }
 
     &.btn--dark {
-      border-color: vars.$dark;
-      color: vars.$dark;
+      border-color: var(--dark);
+      color: var(--dark);
 
       svg {
-        stroke: vars.$dark;
+        stroke: var(--dark);
       }
 
       &:hover {
-        background-color: vars.$dark;
-        color: vars.$white;
+        background-color: var(--dark);
+        color: var(--white);
 
         svg {
-          stroke: vars.$white;
+          stroke: var(--white);
         }
       }
     }
 
     &.btn--blue {
-      border-color: vars.$blue;
-      color: vars.$blue;
+      border-color: var(--blue);
+      color: var(--blue);
 
       svg {
-        stroke: vars.$blue;
+        stroke: var(--blue);
       }
 
       &:hover {
-        background-color: vars.$blue;
-        color: vars.$white;
+        background-color: var(--blue);
+        color: var(--white);
 
         svg {
-          stroke: vars.$white;
+          stroke: var(--white);
         }
       }
     }
 
     &.btn--teal {
-      border-color: vars.$teal;
-      color: vars.$teal;
+      border-color: var(--teal);
+      color: var(--teal);
 
       svg {
-        stroke: vars.$teal;
+        stroke: var(--teal);
       }
 
       &:hover {
-        background-color: vars.$teal;
-        color: vars.$white;
+        background-color: var(--teal);
+        color: var(--white);
 
         svg {
-          stroke: vars.$white;
+          stroke: var(--white);
         }
       }
     }
 
     &.btn--purple {
-      border-color: vars.$purple;
-      color: vars.$purple;
+      border-color: var(--purple);
+      color: var(--purple);
 
       svg {
-        stroke: vars.$purple;
+        stroke: var(--purple);
       }
 
       &:hover {
-        background-color: vars.$purple;
-        color: vars.$white;
+        background-color: var(--purple);
+        color: var(--white);
 
         svg {
-          stroke: vars.$white;
+          stroke: var(--white);
         }
       }
     }
 
     &.btn--white {
-      border-color: vars.$white;
-      color: vars.$white;
+      border-color: var(--white);
+      color: var(--white);
 
       svg {
-        stroke: vars.$white;
+        stroke: var(--white);
       }
 
       &:hover {
-        background-color: vars.$white;
-        color: vars.$dark;
+        background-color: var(--white);
+        color: var(--dark);
 
         svg {
-          stroke: vars.$dark;
+          stroke: var(--dark);
         }
       }
     }
 
     &.btn--grey {
-      border-color: vars.$grey;
-      color: vars.$grey;
+      border-color: var(--grey);
+      color: var(--grey);
 
       svg {
-        stroke: vars.$grey;
+        stroke: var(--grey);
       }
 
       &:hover {
-        background-color: vars.$grey;
-        color: vars.$white;
+        background-color: var(--grey);
+        color: var(--white);
 
         svg {
-          stroke: vars.$white;
+          stroke: var(--white);
         }
       }
     }
 
     &[disabled] {
       background-color: transparent;
-      border-color: vars.$grey;
+      border-color: var(--grey);
       cursor: not-allowed;
-      color: vars.$grey;
+      color: var(--grey);
 
       svg {
-        stroke: vars.$grey;
+        stroke: var(--grey);
       }
 
       &:hover {
         background-color: transparent;
-        border-color: vars.$grey;
-        color: vars.$grey;
+        border-color: var(--grey);
+        color: var(--grey);
 
         svg {
-          stroke: vars.$grey;
+          stroke: var(--grey);
         }
       }
     }
   }
 
   &--small {
-    font-family: vars.$font-medium;
-    font-size: vars.$ms-size;
+    font-family: var(--font-medium);
+    font-size: var(--ms-size);
     padding: 10px 26px;
 
     @media (max-width: vars.$width-tablet-2) {
-      font-size: vars.$mxs-size;
+      font-size: var(--mxs-size);
     }
   }
 }
@@ -285,7 +285,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  grid-gap: vars.$px02;
+  grid-gap: var(--px02);
 
   &--left {
     justify-content: flex-start;

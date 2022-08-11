@@ -45,6 +45,56 @@ Clone this repo and run `npm i` to install packages.
 
 Before you begin pushing code also run `npx husky install` for `pre-commit` hooks.
 
+### A note on styles
+
+While we use [sass](https://sass-lang.com/) with `scss` syntax it should be stated that the
+primary objective is to simply write generally pure `css`. We take advantage of a few nice
+features of `sass` like nesting for [BEM](http://getbem.com/naming/) module style etc. Here's
+an example of the `BEM` style we use:
+
+```scss
+.example {
+  // This is the block
+
+  &--modifier {
+    // This is a modifier of the block
+  }
+
+  &__item {
+    // This is an element
+
+    &--modifer {
+      // This a modifer of the element
+    }
+  }
+}
+```
+
+Wherever possible we use `css` custom properties with our variables but there are a few places
+in which this is not possible so we use the `sass` vars there instead, namely for `@font-face`
+font-family definitions and `@media` queries.
+
+Our `css` variables are defined in `sass` and we use a simple method for providing them as `:root`
+custom properties:
+
+```scss
+@use "vars";
+
+$root-vars: module-variables("vars");
+
+:root {
+  @each $key, $val in $root-vars {
+    --#{$key}: #{$val};
+  }
+}
+```
+
+Overall this approach is convenient as it provides the best of both worlds for users:
+
+- source `sass` with variables and mixins for direct import
+- pure `css` dist with `:root` custom properties and
+  [available selectors](https://www.jambonz.org/docs/jambonz-ui/styles/#h5-available-css-selectors)
+
 ## Storybook
 
 You can run and build storybook with the following.

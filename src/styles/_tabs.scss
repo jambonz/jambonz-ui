@@ -5,11 +5,11 @@
     display: flex;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid var(--grey);
+    border-bottom: 2px solid var(--grey-light);
 
     &__item {
       /** <button> */
-      @include mixins.m();
+      @include mixins.ms();
       @include mixins.font-medium();
       appearance: none;
       border: 0;

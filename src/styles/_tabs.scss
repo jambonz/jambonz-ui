@@ -1,0 +1,50 @@
+@use "mixins";
+
+.tabs {
+  &__nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid var(--grey-light);
+
+    &__item {
+      /** <button> */
+      @include mixins.ms();
+      @include mixins.font-medium();
+      appearance: none;
+      border: 0;
+      background: none;
+      padding: var(--px01) 0;
+      cursor: pointer;
+
+      &.active {
+        color: var(--jambonz);
+      }
+    }
+
+    button + button {
+      margin-left: var(--px03);
+    }
+  }
+
+  &__tabs {
+    &__item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  &__active {
+    width: 0;
+    height: 2px;
+    background-color: var(--jambonz);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: width var(--base-dur) var(--base-ease),
+      transform var(--base-dur) var(--base-ease);
+  }
+}

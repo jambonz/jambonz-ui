@@ -19,7 +19,7 @@ export const TabsMenu = () => {
           The active tab is <span>{activeTab}</span>
         </M>
       </div>
-      <Tabs setActiveTab={setActiveTab}>
+      <Tabs active={[activeTab, setActiveTab]}>
         <Tab id="tab1" label="Tab One">
           <M>This is tab one.</M>
         </Tab>
@@ -30,6 +30,21 @@ export const TabsMenu = () => {
           <M>This is tab three.</M>
         </Tab>
       </Tabs>
+      <div style={{ padding: "16px", textAlign: "center" }}>
+        <label htmlFor="number" className="m" style={{ marginRight: "8px" }}>
+          Set active tab externally
+        </label>
+        <input
+          name="number"
+          type="number"
+          min="1"
+          max="3"
+          onChange={(e) => {
+            setActiveTab(`tab${e.target.value}`);
+          }}
+          defaultValue="1"
+        />
+      </div>
     </>
   );
 };

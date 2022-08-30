@@ -26,16 +26,18 @@ export function Tab({ children }: TabProps) {
 export type TabsProps = {
   /** The React children to map and render from */
   children: React.ReactElement<TabProps>[];
-  /** Optional state setter to pass that receives the active tab */
-  setActiveTab?: Dispatch<SetStateAction<string>>;
+  /** State tuple to pass that receives the active tab */
+  active: [string, Dispatch<SetStateAction<string>>];
 };
 
 /**
  * Global UI for tabbed content.
  */
-export function Tabs({ children, setActiveTab }: TabsProps) {
+export function Tabs({
+  children,
+  active: [activeTab, setActiveTab],
+}: TabsProps) {
   const [button, setButton] = useState<HTMLButtonElement | null>(null);
-  const [active, setActive] = useState(children[0].props.id);
 
   useEffect(() => {
     if (setActiveTab) {
@@ -49,7 +51,7 @@ export function Tabs({ children, setActiveTab }: TabsProps) {
         {React.Children.map(children, (child: React.ReactElement<TabProps>) => {
           const classes = {
             tabs__nav__item: true,
-            active: active === child.props.id,
+            active: activeTab === child.props.id,
           };
 
           return (
@@ -57,14 +59,10 @@ export function Tabs({ children, setActiveTab }: TabsProps) {
               type="button"
               className={classNames(classes)}
               onClick={() => {
-                setActive(child.props.id);
-
-                if (setActiveTab) {
-                  setActiveTab(child.props.id);
-                }
+                setActiveTab(child.props.id);
               }}
               ref={(element) => {
-                if (active === child.props.id) {
+                if (activeTab === child.props.id) {
                   setButton(element);
                 }
               }}
@@ -85,7 +83,7 @@ export function Tabs({ children, setActiveTab }: TabsProps) {
         {React.Children.map(children, (child: React.ReactElement<TabProps>) => {
           const classes = {
             tabs__tabs__item: true,
-            active: active === child.props.id,
+            active: activeTab === child.props.id,
           };
 
           return (

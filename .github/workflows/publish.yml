@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: lts/*
           registry-url: "https://registry.npmjs.org"
-      - run: npm install --openssl-legacy-provider
-      - run: npm publish --access --openssl-legacy-provider public
+      - run: npm install
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -36,7 +36,7 @@ Installing the package is easy. You can use any typical package manager
 for frontend stacks.
 
 ```shell
-npm i jambonz-ui # or yarn add jambonz-ui
+npm i @jambonz/ui-kit # or yarn add @jambonz/ui-kit
 ```
 
 ## Developing

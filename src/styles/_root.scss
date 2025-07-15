@@ -1,6 +1,7 @@
 @use "vars";
+@use "sass:meta";
 
-$root-vars: module-variables("vars");
+$root-vars: meta.module-variables("vars");
 
 :root {
   @each $key, $val in $root-vars {

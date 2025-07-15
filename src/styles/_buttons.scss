@@ -1,5 +1,6 @@
 @use "vars";
 @use "mixins";
+@use "sass:color";
 
 .btn {
   @include mixins.font-bold();
@@ -50,7 +51,7 @@
   }
 
   &:hover {
-    background-color: mix(vars.$pink, vars.$jambonz, vars.$mix-amount);
+    background-color: color.mix(vars.$pink, vars.$jambonz, vars.$mix-amount);
   }
 
   @media (max-width: vars.$width-tablet-2) {
@@ -61,7 +62,7 @@
     background-color: var(--dark);
 
     &:hover {
-      background-color: mix(vars.$white, vars.$dark, vars.$mix-amount);
+      background-color: color.mix(vars.$white, vars.$dark, vars.$mix-amount);
     }
   }
 
@@ -69,7 +70,7 @@
     background-color: var(--blue);
 
     &:hover {
-      background-color: mix(vars.$white, vars.$blue, vars.$mix-amount);
+      background-color: color.mix(vars.$white, vars.$blue, vars.$mix-amount);
     }
   }
 
@@ -77,7 +78,7 @@
     background-color: var(--teal);
 
     &:hover {
-      background-color: mix(vars.$white, vars.$teal, vars.$mix-amount);
+      background-color: color.mix(vars.$white, vars.$teal, vars.$mix-amount);
     }
   }
 
@@ -85,7 +86,7 @@
     background-color: var(--purple);
 
     &:hover {
-      background-color: mix(vars.$white, vars.$purple, vars.$mix-amount);
+      background-color: color.mix(vars.$white, vars.$purple, vars.$mix-amount);
     }
   }
 
@@ -94,7 +95,7 @@
     color: var(--jambonz);
 
     &:hover {
-      background-color: mix(vars.$grey, vars.$white, vars.$mix-amount);
+      background-color: color.mix(vars.$grey, vars.$white, vars.$mix-amount);
     }
   }
 
@@ -103,7 +104,7 @@
     color: var(--white);
 
     &:hover {
-      background-color: mix(vars.$white, vars.$grey, vars.$mix-amount);
+      background-color: color.mix(vars.$white, vars.$grey, vars.$mix-amount);
     }
   }
 
